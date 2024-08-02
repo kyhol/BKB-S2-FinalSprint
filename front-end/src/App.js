@@ -1,14 +1,16 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Header from "./Components/Header/Header";
 import Footer from "./Components/Footer/Footer";
-import Checkout from "./Components/Pages/Checkout";
-import ProductDetails from "./Components/Pages/ProductDetails";
-import ProductList from "./Components/Pages/ProductList";
-import ShoppingCart from "./Components/Pages/ShoppingCart";
+import Checkout from "./Pages/Checkout";
+import ProductDetails from "./Pages/ProductDetails";
+import ProductList from "./Pages/ProductList";
+import ShoppingCart from "./Pages/ShoppingCart";
 
 function App() {
   return (
     <Router>
+      <Header />
       <Routes>
         <Route path="/" element={<ProductList />} />
         <Route path="/product/:id" element={<ProductDetails />} />
