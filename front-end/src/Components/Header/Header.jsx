@@ -1,6 +1,6 @@
+import React from "react";
 import CartButton from "../Cart-Button/CartButton";
 import "./Header.css";
-import "../../index.css";
 import { FaShippingFast } from "react-icons/fa";
 
 const Header = () => {

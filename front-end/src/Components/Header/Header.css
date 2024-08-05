@@ -3,11 +3,12 @@ header {
   position: sticky;
   top: 0;
   left: 0;
+  z-index: 1000;
 }
 
 .sale-popup {
   background-color: black;
-  opacity: 0.6;
+  opacity: 0.8;
   height: 2rem;
   color: white;
   display: flex;
@@ -23,6 +24,7 @@ header {
 
 .shipping-icon {
   font-size: 1.25rem;
+  margin-left: 0.5rem;
 }
 
 .underline {
@@ -33,11 +35,12 @@ header h2 {
   letter-spacing: 0.25rem;
   text-shadow: 4px 3px 3px rgba(0, 0, 0, 0.8);
   font-size: 2rem;
+  margin: 0;
 }
 
 .title-section {
   background-image: url(../../Assets/HeaderImage.jpg);
-  background-position-y: 35%;
+  background-position: center;
   background-size: cover;
   color: #ffad33;
   height: 24rem;
@@ -48,7 +51,7 @@ header h2 {
   position: relative;
   top: 0;
   left: 0;
-  font-family: Poppins, sans-serif;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 .cart-section {
@@ -57,4 +60,11 @@ header h2 {
   align-items: center;
   gap: 1rem;
   padding: 0.5rem 3rem;
+}
+
+@media (max-width: 768px) {
+  .title-section {
+    height: 18rem;
+    padding: 1rem 2rem;
+  }
 }
