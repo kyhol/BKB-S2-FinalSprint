@@ -1,0 +1,48 @@
+.custom-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.custom-button:hover {
+  background-color: #0056b3;
+}
+
+.radial-button {
+  background: radial-gradient(circle, #db4444 0%, #a83434 50%, #752424 100%);
+}
+
+.radial-button:hover {
+  transform: scale(1.1);
+}
+
+.item-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+  font-size: 12px;
+  background-color: #ffffff;
+  color: #db4444;
+  border-radius: 50%;
+}
+
+.checkout-button {
+  width: 100%;
+  margin-top: 20px;
+  background-color: #28a745;
+}
+
+.checkout-button:hover {
+  background-color: #218838;
+}
