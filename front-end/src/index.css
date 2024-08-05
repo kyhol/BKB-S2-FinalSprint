@@ -68,6 +68,7 @@ code {
 
 /* CART PAGE CSS */
 .main-content {
+  max-width: 100%;
   display: flex;
   justify-content: center;
   padding: 1rem;
@@ -119,4 +120,37 @@ code {
   width: 100%;
   padding: 0.5rem 0;
   margin-top: 1rem;
+}
+
+/* Product List CSS */
+
+.product-list-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  margin-inline: 5rem;
+}
+
+.product-container {
+  display: flex;
+  border: 1px solid black;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: auto;
+  padding: 0.5rem;
+  gap: 0.5rem;
+  border-radius: var(--border-radius);
+}
+
+.product-container img {
+  background-color: red;
+  width: 100%;
+  height: 20rem;
+}
+
+.cost-and-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-inline: 0.5rem;
 }
