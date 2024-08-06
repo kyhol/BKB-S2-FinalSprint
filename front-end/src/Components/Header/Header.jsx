@@ -2,6 +2,7 @@ import React from "react";
 import "./Header.css";
 import { useNavigate } from "react-router-dom";
 import { FaShippingFast } from "react-icons/fa";
+
 import Button from "../Button/Button";
 import { useShoppingCart } from "../../Context/ShoppingCartProvider";
 
@@ -29,13 +30,39 @@ const Header = () => {
       </div>
       <div className="nav-section">
         <div className="left-side">
-          <Button
-            text="View All Records"
-            variant="nav"
-            onClick={() => {
-              navigate("/records");
-            }}
-          />
+          {/* {(window.location.pathname === "/records")  ? ({
+            <Button
+              text="Home"
+              variant="nav"
+              onClick={() => {
+                navigate("/");
+              }}
+            />;})
+          } else {
+            <Button
+              text="Records"
+              variant="nav"
+              onClick={handleNavToRecords}
+            />;
+          } */}
+
+          {window.location.pathname === "/records" ? (
+            <Button
+              text="Home"
+              variant="nav"
+              onClick={() => {
+                navigate("/");
+              }}
+            />
+          ) : (
+            <Button
+              text="Records"
+              variant="nav"
+              onClick={() => {
+                navigate("/records");
+              }}
+            />
+          )}
         </div>
         <div className="right-side">
           <Button

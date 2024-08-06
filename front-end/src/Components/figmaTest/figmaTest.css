@@ -396,7 +396,7 @@ button {
   height: auto;
 }
 
-.add-to-cart-button {
+/* .add-to-cart-button {
   position: absolute;
   width: 100%;
   bottom: 0;
@@ -408,7 +408,7 @@ button {
   cursor: pointer;
   opacity: 0;
   transition: opacity 0.3s;
-}
+} */
 
 .cart-with-flat-discount:hover .add-to-cart-button {
   opacity: 1;

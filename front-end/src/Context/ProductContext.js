@@ -11,6 +11,7 @@ export function ProductProvider({ children }) {
   const [error, setError] = useState(null);
   const [genres, setGenres] = useState([]);
   const [artists, setArtists] = useState([]);
+  const [albums, setAlbums] = useState([]);
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -24,6 +25,7 @@ export function ProductProvider({ children }) {
         setProducts(data);
         setArtists([...new Set(data.map((product) => product.artist))]);
         setGenres([...new Set(data.map((product) => product.genre))]);
+        setAlbums([...new Set(data.map((product) => product.title))]);
       } catch (error) {
         setError(error.message);
       } finally {
@@ -36,6 +38,7 @@ export function ProductProvider({ children }) {
 
   console.log(artists);
   console.log(genres);
+  console.log(albums);
 
   return (
     <ProductContext.Provider

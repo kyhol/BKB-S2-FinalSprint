@@ -7,7 +7,7 @@
       "year": 1982,
       "genre": "Pop",
       "price": 24.99,
-      "coverImage": "https://example.com/thriller-cover.jpg",
+      "coverImage": "/album-covers/thriller.jpg",
       "tracks": [
         "Wanna Be Startin' Somethin'",
         "Baby Be Mine",
@@ -30,7 +30,7 @@
       "year": 1980,
       "genre": "Hard Rock",
       "price": 21.99,
-      "coverImage": "https://example.com/back-in-black-cover.jpg",
+      "coverImage": "/album-covers/back-in-black.jpg",
       "tracks": [
         "Hells Bells",
         "Shoot to Thrill",
@@ -54,7 +54,7 @@
       "year": 1973,
       "genre": "Progressive Rock",
       "price": 26.99,
-      "coverImage": "https://example.com/dark-side-of-the-moon-cover.jpg",
+      "coverImage": "/album-covers/dark-side-of-the-moon.jpg",
       "tracks": [
         "Speak to Me",
         "Breathe",
@@ -78,7 +78,7 @@
       "year": 1977,
       "genre": "Rock",
       "price": 22.99,
-      "coverImage": "https://example.com/rumours-cover.jpg",
+      "coverImage": "/album-covers/rumors.jpg",
       "tracks": [
         "Second Hand News",
         "Dreams",
@@ -103,7 +103,7 @@
       "year": 1984,
       "genre": "Pop, Rock",
       "price": 23.99,
-      "coverImage": "https://example.com/purple-rain-cover.jpg",
+      "coverImage": "/album-covers/purple-rain.jpg",
       "tracks": [
         "Let's Go Crazy",
         "Take Me with U",
@@ -126,7 +126,7 @@
       "year": 1991,
       "genre": "Grunge, Alternative Rock",
       "price": 20.99,
-      "coverImage": "https://example.com/nevermind-cover.jpg",
+      "coverImage": "/album-covers/nevermind.jpg",
       "tracks": [
         "Smells Like Teen Spirit",
         "In Bloom",
@@ -152,7 +152,7 @@
       "year": 1976,
       "genre": "Rock",
       "price": 22.99,
-      "coverImage": "https://example.com/hotel-california-cover.jpg",
+      "coverImage": "/album-covers/hotel-california.jpg",
       "tracks": [
         "Hotel California",
         "New Kid in Town",
@@ -175,7 +175,7 @@
       "year": 1971,
       "genre": "Hard Rock, Folk Rock",
       "price": 25.99,
-      "coverImage": "https://example.com/led-zeppelin-iv-cover.jpg",
+      "coverImage": "/album-covers/led-zeppelin-iv.jpg",
       "tracks": [
         "Black Dog",
         "Rock and Roll",
@@ -197,7 +197,7 @@
       "year": 1977,
       "genre": "Disco",
       "price": 19.99,
-      "coverImage": "https://example.com/saturday-night-fever-cover.jpg",
+      "coverImage": "/album-covers/saturday-night-fever.jpg",
       "tracks": [
         "Stayin' Alive",
         "How Deep Is Your Love",
@@ -228,7 +228,7 @@
       "year": 1975,
       "genre": "Rock",
       "price": 21.99,
-      "coverImage": "https://example.com/born-to-run-cover.jpg",
+      "coverImage": "/album-covers/born-to-run.jpg",
       "tracks": [
         "Thunder Road",
         "Tenth Avenue Freeze-Out",
@@ -250,7 +250,7 @@
       "year": 1987,
       "genre": "Hard Rock",
       "price": 23.99,
-      "coverImage": "https://example.com/appetite-for-destruction-cover.jpg",
+      "coverImage": "/album-covers/appetite-for-destruction.jpg",
       "tracks": [
         "Welcome to the Jungle",
         "It's So Easy",
@@ -276,7 +276,7 @@
       "year": 1987,
       "genre": "Rock",
       "price": 22.99,
-      "coverImage": "https://example.com/joshua-tree-cover.jpg",
+      "coverImage": "/album-covers/the-joshua-tree.jpg",
       "tracks": [
         "Where the Streets Have No Name",
         "I Still Haven't Found What I'm Looking For",
@@ -301,7 +301,7 @@
       "year": 2011,
       "genre": "Pop, Soul",
       "price": 19.99,
-      "coverImage": "https://example.com/21-cover.jpg",
+      "coverImage": "/album-covers/21.jpg",
       "tracks": [
         "Rolling in the Deep",
         "Rumour Has It",
@@ -326,7 +326,7 @@
       "year": 1995,
       "genre": "Alternative Rock",
       "price": 20.99,
-      "coverImage": "https://example.com/jagged-little-pill-cover.jpg",
+      "coverImage": "/album-covers/jagged-little-pill.jpg",
       "tracks": [
         "All I Really Want",
         "You Oughta Know",
@@ -352,7 +352,7 @@
       "year": 1991,
       "genre": "Heavy Metal",
       "price": 24.99,
-      "coverImage": "https://example.com/metallica-black-album-cover.jpg",
+      "coverImage": "/album-covers/the-black-album.jpg",
       "tracks": [
         "Enter Sandman",
         "Sad but True",
@@ -378,7 +378,7 @@
       "year": 1998,
       "genre": "R&B, Hip Hop",
       "price": 21.99,
-      "coverImage": "https://example.com/miseducation-lauryn-hill-cover.jpg",
+      "coverImage": "/album-covers/the-miseducation-of-lauryn-hill.jpg",
       "tracks": [
         "Intro",
         "Lost Ones",
@@ -406,7 +406,7 @@
       "year": 1986,
       "genre": "World, Pop",
       "price": 22.99,
-      "coverImage": "https://example.com/graceland-cover.jpg",
+      "coverImage": "/album-covers/graceland.jpg",
       "tracks": [
         "The Boy in the Bubble",
         "Graceland",
@@ -431,7 +431,7 @@
       "year": 1984,
       "genre": "Rock",
       "price": 23.99,
-      "coverImage": "https://example.com/born-in-the-usa-cover.jpg",
+      "coverImage": "/album-covers/born-in-the-usa.jpg",
       "tracks": [
         "Born in the U.S.A.",
         "Cover Me",
@@ -457,7 +457,7 @@
       "year": 1971,
       "genre": "Pop, Singer-Songwriter",
       "price": 21.99,
-      "coverImage": "https://example.com/tapestry-cover.jpg",
+      "coverImage": "/album-covers/tapestry.jpg",
       "tracks": [
         "I Feel the Earth Move",
         "So Far Away",
@@ -483,7 +483,7 @@
       "year": 1966,
       "genre": "Rock, Psychedelic Pop",
       "price": 25.99,
-      "coverImage": "https://example.com/pet-sounds-cover.jpg",
+      "coverImage": "/album-covers/pet-sounds.jpg",
       "tracks": [
         "Wouldn't It Be Nice",
         "You Still Believe in Me",
@@ -510,7 +510,7 @@
       "year": 1959,
       "genre": "Jazz",
       "price": 26.99,
-      "coverImage": "https://example.com/kind-of-blue-cover.jpg",
+      "coverImage": "/album-covers/kind-of-blue.jpg",
       "tracks": [
         "So What",
         "Freddie Freeloader",
@@ -523,36 +523,13 @@
       "quantity": 30
     },
     {
-      "id": 22,
-      "title": "Purple Rain",
-      "artist": "Prince and The Revolution",
-      "year": 1984,
-      "genre": "Pop, Rock",
-      "price": 23.99,
-      "coverImage": "https://example.com/purple-rain-cover.jpg",
-      "tracks": [
-        "Let's Go Crazy",
-        "Take Me with U",
-        "The Beautiful Ones",
-        "Computer Blue",
-        "Darling Nikki",
-        "When Doves Cry",
-        "I Would Die 4 U",
-        "Baby I'm a Star",
-        "Purple Rain"
-      ],
-      "description": "Purple Rain is the sixth studio album by American recording artist Prince, released on June 25, 1984, by Warner Bros. Records. It is the soundtrack to the 1984 film of the same name.",
-      "inStock": true,
-      "quantity": 40
-    },
-    {
       "id": 23,
       "title": "The Wall",
       "artist": "Pink Floyd",
       "year": 1979,
       "genre": "Progressive Rock",
       "price": 28.99,
-      "coverImage": "https://example.com/the-wall-cover.jpg",
+      "coverImage": "/album-covers/the-wall.jpg",
       "tracks": [
         "Another Brick in the Wall (Part 1)",
         "The Happiest Days of Our Lives",
@@ -590,7 +567,7 @@
       "year": 1971,
       "genre": "Soul",
       "price": 22.99,
-      "coverImage": "https://example.com/whats-going-on-cover.jpg",
+      "coverImage": "/album-covers/whats-going-on.jpg",
       "tracks": [
         "What's Going On",
         "What's Happening Brother",
@@ -613,7 +590,7 @@
       "year": 1972,
       "genre": "Rock",
       "price": 24.99,
-      "coverImage": "https://example.com/exile-on-main-st-cover.jpg",
+      "coverImage": "/album-covers/exile-on-main-st.jpg",
       "tracks": [
         "Rocks Off",
         "Rip This Joint",
@@ -639,126 +616,13 @@
       "quantity": 30
     },
     {
-      "id": 26,
-      "title": "The Wall",
-      "artist": "Pink Floyd",
-      "year": 1979,
-      "genre": "Progressive Rock",
-      "price": 28.99,
-      "coverImage": "https://example.com/the-wall-cover.jpg",
-      "tracks": [
-        "In the Flesh?",
-        "The Thin Ice",
-        "Another Brick in the Wall, Part 1",
-        "The Happiest Days of Our Lives",
-        "Another Brick in the Wall, Part 2",
-        "Mother",
-        "Goodbye Blue Sky",
-        "Empty Spaces",
-        "Young Lust",
-        "One of My Turns",
-        "Don't Leave Me Now",
-        "Another Brick in the Wall, Part 3",
-        "Goodbye Cruel World",
-        "Hey You",
-        "Is There Anybody Out There?",
-        "Nobody Home",
-        "Vera",
-        "Bring the Boys Back Home",
-        "Comfortably Numb",
-        "The Show Must Go On",
-        "In the Flesh",
-        "Run Like Hell",
-        "Waiting for the Worms",
-        "Stop",
-        "The Trial",
-        "Outside the Wall"
-      ],
-      "description": "The Wall is the eleventh studio album by English rock band Pink Floyd, released on 30 November 1979 by Harvest and Columbia Records.",
-      "inStock": true,
-      "quantity": 40
-    },
-    {
-      "id": 27,
-      "title": "The Joshua Tree",
-      "artist": "U2",
-      "year": 1987,
-      "genre": "Rock",
-      "price": 21.99,
-      "coverImage": "https://example.com/the-joshua-tree-cover.jpg",
-      "tracks": [
-        "Where the Streets Have No Name",
-        "I Still Haven't Found What I'm Looking For",
-        "With or Without You",
-        "Bullet the Blue Sky",
-        "Running to Stand Still",
-        "Red Hill Mining Town",
-        "In God's Country",
-        "Trip Through Your Wires",
-        "One Tree Hill",
-        "Exit",
-        "Mothers of the Disappeared"
-      ],
-      "description": "The Joshua Tree is the fifth studio album by Irish rock band U2. It was produced by Daniel Lanois and Brian Eno, and was released on 9 March 1987 on Island Records.",
-      "inStock": true,
-      "quantity": 35
-    },
-    {
-      "id": 28,
-      "title": "What's Going On",
-      "artist": "Marvin Gaye",
-      "year": 1971,
-      "genre": "Soul",
-      "price": 24.99,
-      "coverImage": "https://example.com/whats-going-on-cover.jpg",
-      "tracks": [
-        "What's Going On",
-        "What's Happening Brother",
-        "Flyin' High (In the Friendly Sky)",
-        "Save the Children",
-        "God Is Love",
-        "Mercy Mercy Me (The Ecology)",
-        "Right On",
-        "Wholy Holy",
-        "Inner City Blues (Make Me Wanna Holler)"
-      ],
-      "description": "What's Going On is the eleventh studio album by American soul singer, songwriter, and producer Marvin Gaye. It was released on May 21, 1971, by the Motown Records subsidiary label Tamla.",
-      "inStock": true,
-      "quantity": 25
-    },
-    {
-      "id": 29,
-      "title": "Rumors",
-      "artist": "Fleetwood Mac",
-      "year": 1977,
-      "genre": "Rock",
-      "price": 22.99,
-      "coverImage": "https://example.com/rumors-cover.jpg",
-      "tracks": [
-        "Second Hand News",
-        "Dreams",
-        "Never Going Back Again",
-        "Don't Stop",
-        "Go Your Own Way",
-        "Songbird",
-        "The Chain",
-        "You Make Loving Fun",
-        "I Don't Want to Know",
-        "Oh Daddy",
-        "Gold Dust Woman"
-      ],
-      "description": "Rumors is the eleventh studio album by British-American rock band Fleetwood Mac, released on 4 February 1977 by Warner Bros. Records.",
-      "inStock": true,
-      "quantity": 35
-    },
-    {
       "id": 30,
       "title": "Highway to Hell",
       "artist": "AC/DC",
       "year": 1979,
       "genre": "Hard Rock",
       "price": 20.99,
-      "coverImage": "https://example.com/highway-to-hell-cover.jpg",
+      "coverImage": "/album-covers/highway-to-hell.jpg",
       "tracks": [
         "Highway to Hell",
         "Girls Got Rhythm",
@@ -776,36 +640,13 @@
       "quantity": 45
     },
     {
-      "id": 31,
-      "title": "Hotel California",
-      "artist": "Eagles",
-      "year": 1976,
-      "genre": "Rock",
-      "price": 22.99,
-      "coverImage": "https://example.com/hotel-california-cover.jpg",
-      "tracks": [
-        "Hotel California",
-        "New Kid in Town",
-        "Life in the Fast Lane",
-        "Wasted Time",
-        "Wasted Time (Reprise)",
-        "Victim of Love",
-        "Pretty Maids All in a Row",
-        "Try and Love Again",
-        "The Last Resort"
-      ],
-      "description": "Hotel California is the fifth studio album by American rock band the Eagles, released on December 8, 1976, by Asylum Records.",
-      "inStock": true,
-      "quantity": 30
-    },
-    {
       "id": 32,
       "title": "Led Zeppelin II",
       "artist": "Led Zeppelin",
       "year": 1969,
       "genre": "Hard Rock, Blues Rock",
       "price": 25.99,
-      "coverImage": "https://example.com/led-zeppelin-ii-cover.jpg",
+      "coverImage": "/album-covers/led-zeppelin-ii.jpg",
       "tracks": [
         "Whole Lotta Love",
         "What Is and What Should Never Be",
@@ -820,32 +661,6 @@
       "description": "Led Zeppelin II is the second studio album by the English rock band Led Zeppelin, released on 22 October 1969 in the United States and on 31 October 1969 in the United Kingdom by Atlantic Records.",
       "inStock": true,
       "quantity": 30
-    },
-    {
-      "id": 33,
-      "title": "Tapestry",
-      "artist": "Carole King",
-      "year": 1971,
-      "genre": "Folk Rock, Soft Rock",
-      "price": 18.99,
-      "coverImage": "https://example.com/tapestry-cover.jpg",
-      "tracks": [
-        "I Feel the Earth Move",
-        "So Far Away",
-        "It's Too Late",
-        "Home Again",
-        "Beautiful",
-        "Way Over Yonder",
-        "You've Got a Friend",
-        "Where You Lead",
-        "Will You Love Me Tomorrow?",
-        "Smackwater Jack",
-        "Tapestry",
-        "(You Make Me Feel Like) A Natural Woman"
-      ],
-      "description": "Tapestry is the second studio album by American singer-songwriter Carole King, released in 1971 on Ode Records and produced by Lou Adler.",
-      "inStock": true,
-      "quantity": 50
     }
   ]
 }
