@@ -114,7 +114,7 @@ const FigmaTest = () => {
                   {hoveredAlbumId === product.id && (
                     <Button
                       text="Add to Cart"
-                      className="add-to-cart-button"
+                      className="add-to-cart-button-home"
                       onClick={() => handleAddToCart(product)}
                     />
                   )}
