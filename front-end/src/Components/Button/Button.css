@@ -2,11 +2,11 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 20px;
+  padding: 0.5rem 1rem;
   font-weight: bold;
   color: #ffffff;
   border: none;
-  border-radius: 5px;
+  border-radius: var(--border-radius);
   cursor: pointer;
   transition: background 0.3s ease, transform 0.3s ease;
 }
@@ -43,13 +43,16 @@
   height: 3rem;
 }
 
+.custom-button:not(.quick-view) {
+  opacity: 1;
+}
+
 .custom-button.quick-view:hover {
   transform: translate(-50%, -50%) scale(0.85);
 }
 
 .add-to-cart-button {
   padding: 0.5rem 1rem;
-  font-size: 14px;
   border-radius: var(--border-radius);
   transition: all 0.3s ease;
 }
@@ -63,9 +66,9 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 20px;
-  height: 20px;
-  margin-left: 10px;
+  width: 1rem;
+  height: 1rem;
+  margin-left: 1rem;
   font-size: 12px;
   background-color: #ffffff;
   color: #db4444;

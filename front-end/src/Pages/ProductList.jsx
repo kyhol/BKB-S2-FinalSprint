@@ -36,8 +36,6 @@ const ProductList = () => {
     return <div>Error: {error}</div>;
   }
 
-  // console.log(products);
-
   const handleOpenProduct = (product) => {
     console.log("Opening product details");
     console.log(product.id);
@@ -62,7 +60,7 @@ const ProductList = () => {
   const handleQuickView = (e, product) => {
     e.stopPropagation();
     setSelectedProduct(product);
-    console.log("Selected product:", product);
+    console.log("Selected Image:", product.coverImage);
   };
 
   return (
@@ -81,7 +79,7 @@ const ProductList = () => {
             >
               <div className="product-content">
                 <h3>{product.name}</h3>
-                <img src={product.image} alt={product.name} />
+                <img src={product.coverImage} alt={product.name} />
                 {renderQuantityRemaining(product.quantity)}
                 <div className="cost-and-button">
                   <span className="record-price">${product.price}</span>
