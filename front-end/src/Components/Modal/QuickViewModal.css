@@ -19,16 +19,18 @@
   max-width: 1200px;
   max-height: 90vh;
   overflow-y: auto;
+  position: fixed;
 }
 
 .modal-close {
   position: absolute;
   top: 1rem;
   right: 1rem;
-  font-size: 1.5rem;
   cursor: pointer;
   color: #333;
   transition: transform 0.2s ease;
+  width: 1rem;
+  height: 1rem;
 }
 
 .modal-close:hover {
