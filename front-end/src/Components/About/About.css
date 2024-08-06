@@ -1,0 +1,17 @@
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+    background-image: url('../../Assets/About/record.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.aboutText {
+    padding: 10%;
+    overflow-y: scroll;
+}
