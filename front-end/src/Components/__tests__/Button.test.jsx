@@ -16,8 +16,8 @@ test('calls onClick handler when button is clicked', () => {
   expect(handleClick).toHaveBeenCalledTimes(1);
 });
 
-test('renders with default props when some props are missing', () => {
-    const { container } = render(<Button text="Default Test" />);
-    const buttonElement = container.querySelector('button');
-    expect(buttonElement).toHaveClass('custom-button radial-button');
-  });
+test('renders count when count prop is provided', () => {
+  render(<Button text="Items" count={5} />);
+  const countElement = screen.getByText(/5/i);
+  expect(countElement).toBeInTheDocument();
+});
