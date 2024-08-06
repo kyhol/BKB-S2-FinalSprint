@@ -7,7 +7,7 @@ import Home from "./Pages/Home";
 import ProductDetails from "./Pages/ProductDetails";
 import ProductList from "./Pages/ProductList";
 import ShoppingCart from "./Pages/ShoppingCart";
-import "./App.css";
+import "./index.css";
 
 function App() {
   return (
@@ -15,9 +15,8 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/product-list" element={<ProductList />} />
         <Route path="/product/:id" element={<ProductDetails />} />
-        <Route path="/cart" element={<ShoppingCart />} />
+        {/* <Route path="/cart" element={<ShoppingCart />} /> */}
         <Route path="/checkout" element={<Checkout />} />
       </Routes>
 

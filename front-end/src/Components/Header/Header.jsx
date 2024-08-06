@@ -1,9 +1,11 @@
 import React from "react";
-import CartButton from "../Cart-Button/CartButton";
 import "./Header.css";
 import { FaShippingFast } from "react-icons/fa";
+import Button from "../Button/Button";
 
 const Header = () => {
+  const [cartItemsCount, setCartItemsCount] = React.useState(3);
+
   return (
     <header>
       <div className="sale-popup">
@@ -17,7 +19,12 @@ const Header = () => {
         <h2>Vinyl Tap</h2>
       </div>
       <div className="cart-section">
-        <CartButton />
+        <Button
+          text="Cart"
+          count={cartItemsCount}
+          onClick={() => console.log("Cart button clicked")}
+          variant="cart"
+        />
       </div>
     </header>
   );
