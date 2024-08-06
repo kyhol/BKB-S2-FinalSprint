@@ -1,0 +1,96 @@
+/* Product List CSS */
+
+.product-list-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  margin-inline: 5rem;
+}
+
+.product-container {
+  width: 20rem;
+  display: flex;
+  border: 1px solid black;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: auto;
+  padding: 0.5rem;
+  gap: 0.5rem;
+  border-radius: var(--border-radius);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.blur-background {
+  filter: blur(1px);
+}
+
+.product-container:hover .product-content {
+  filter: blur(1px);
+}
+
+.product-container:hover .quick-view {
+  opacity: 1;
+}
+
+.product-container img {
+  background-color: whitesmoke;
+  width: 100%;
+  height: 20rem;
+  border-radius: var(--border-radius);
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.quantity-remaining {
+  height: 1rem;
+  margin: 0.5rem 0;
+}
+
+.hot-buy {
+  color: #ff0000;
+  font-weight: bold;
+  text-align: center;
+}
+
+.blink-text {
+  animation: blink 1s linear infinite;
+  text-decoration: underline;
+}
+
+.cost-and-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-inline: 0.5rem;
+}
+
+.record-price {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.product-layout {
+  display: flex;
+  flex-direction: column;
+}
+
+.pagination-div {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  margin-inline: 10rem;
+  font-size: 2rem;
+}

@@ -1,8 +1,5 @@
 header {
   color: var(--color-darkest);
-  position: sticky;
-  top: 0;
-  left: 0;
   z-index: 1000;
 }
 
@@ -14,6 +11,10 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 .sale-popup-text {
@@ -39,6 +40,12 @@ header h2 {
   color: #ffad33;
 }
 
+header h2:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: ease-in-out 0.5s;
+}
+
 .title-section {
   background-image: url(../../Assets/HeaderImage.jpg);
   background-position: center;
@@ -49,9 +56,7 @@ header h2 {
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
-  position: relative;
-  top: 0;
-  left: 0;
+
   text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
 }
 

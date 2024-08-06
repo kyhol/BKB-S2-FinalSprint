@@ -1,10 +1,10 @@
 import React from "react";
 import "./Button.css";
 
-const Button = ({ text, count, onClick, className, variant }) => {
-  const buttonClass = `custom-button ${
-    variant === "cart" ? "radial-button" : ""
-  } ${className || ""}`;
+const Button = ({ text, count, onClick, className, variant, isCheckout }) => {
+  const buttonClass = `custom-button ${variant || ""} ${className || ""} ${
+    !isCheckout ? "radial-button" : ""
+  }`;
 
   return (
     <button className={buttonClass} onClick={onClick}>

@@ -1,10 +1,16 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./Header.css";
 import { FaShippingFast } from "react-icons/fa";
 import Button from "../Button/Button";
 
 const Header = () => {
   const [cartItemsCount, setCartItemsCount] = React.useState(3);
+  const navigate = useNavigate();
+
+  const onTitleClick = () => {
+    navigate("/");
+  };
 
   return (
     <header>
@@ -16,7 +22,7 @@ const Header = () => {
         </p>
       </div>
       <div className="title-section">
-        <h2>Vinyl Tap</h2>
+        <h2 onClick={onTitleClick}>Vinyl Tap</h2>
       </div>
       <div className="cart-section">
         <Button
