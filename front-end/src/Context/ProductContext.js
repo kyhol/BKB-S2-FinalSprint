@@ -10,6 +10,7 @@ export function ProductProvider({ children }) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [genres, setGenres] = useState([]);
+  const [artists, setArtists] = useState([]);
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -21,6 +22,8 @@ export function ProductProvider({ children }) {
         const data = await response.json();
         // console.log(data);
         setProducts(data);
+        setArtists([...new Set(data.map((product) => product.artist))]);
+        setGenres([...new Set(data.map((product) => product.genre))]);
       } catch (error) {
         setError(error.message);
       } finally {
@@ -31,8 +34,13 @@ export function ProductProvider({ children }) {
     fetchProducts();
   }, []);
 
+  console.log(artists);
+  console.log(genres);
+
   return (
-    <ProductContext.Provider value={{ products, loading, error }}>
+    <ProductContext.Provider
+      value={{ products, loading, error, artists, genres }}
+    >
       {children}
     </ProductContext.Provider>
   );

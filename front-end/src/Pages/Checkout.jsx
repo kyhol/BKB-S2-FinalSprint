@@ -1,10 +1,10 @@
 import React from "react";
-import "../index.css";
+import "./Styles/Checkout.css";
 import Button from "../Components/Button/Button";
 import { useShoppingCart } from "../Context/ShoppingCartProvider";
 
 const Checkout = () => {
-  const { cartItems } = useShoppingCart();
+  const { cartItems, addToCart, removeFromCart } = useShoppingCart();
 
   // Calculate subtotal using a for loop
   let subtotal = 0;
