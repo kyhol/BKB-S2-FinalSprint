@@ -57,6 +57,20 @@
   transition: all 0.3s ease;
 }
 
+.add-to-cart-button-home {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  background: radial-gradient(circle, #db4444 0%, #a83434 50%, #752424 100%);
+  color: #fff;
+  border: none;
+  padding: 10px 0;
+  text-align: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
 .add-to-cart-button:hover {
   transform: scale(1.05);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
