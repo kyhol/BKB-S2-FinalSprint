@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "../Button/Button";
 import { FaX } from "react-icons/fa6";
-import "./QuickViewModal.css"; // Make sure to create this CSS file
+import "./QuickViewModal.css";
 
 const QuickViewModal = ({ product, onClose, onAddToCart }) => {
   const renderQuantityRemaining = (quantity) => {
