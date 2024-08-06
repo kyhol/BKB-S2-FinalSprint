@@ -60,12 +60,23 @@ header h2:hover {
   text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
 }
 
-.cart-section {
+.nav-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+
+.right-side {
+  width: 50%;
   display: flex;
   justify-content: flex-end;
-  align-items: center;
-  gap: 1rem;
-  padding: 0.5rem 3rem;
+  margin-right: 2rem;
+}
+.left-side {
+  width: 60%;
+  display: flex;
+  justify-content: flex-end;
 }
 
 @media (max-width: 768px) {

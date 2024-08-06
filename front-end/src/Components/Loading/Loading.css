@@ -1,0 +1,24 @@
+svg {
+  width: 400px;
+  height: 400px;
+  font-family: "Poppins", sans-serif;
+}
+
+#label {
+  fill: white;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#record {
+  transform-origin: center center;
+  animation: spin 4s linear infinite;
+}
+
+.line {
+  stroke: white;
+}
