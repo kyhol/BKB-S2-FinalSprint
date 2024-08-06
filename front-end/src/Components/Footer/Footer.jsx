@@ -48,63 +48,109 @@ const Version7Dark = ({ className = "", ...props }) => {
           <div className="links-column2">
             <div className="git-hub">GitHub</div>
             <div className="links4">
-              <div className="platform">
-                <img className="vector" src={GitHubLogo} alt="GitHub Logo" />
-                <div className="git-hub-kyle">GitHub Kyle</div>
-              </div>
-              <div className="platform2">
-                <div className="ic-round-apple">
-                  <img
-                    className="group-1000005949"
-                    src={GitHubLogo}
-                    alt="GitHub Logo"
-                  />
+              <a
+                href="https://github.com/kyhol"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="platform-link"
+              >
+                <div className="platform">
+                  <img className="vector" src={GitHubLogo} alt="GitHub Logo" />
+                  <div className="git-hub-kyle">GitHub Kyle</div>
                 </div>
-                <div className="git-hub-brian">GitHub Brian</div>
-              </div>
-              <div className="platform">
-                <div className="ic-round-apple">
-                  <img
-                    className="group-10000059492"
-                    src={GitHubLogo}
-                    alt="GitHub Logo"
-                  />
+              </a>
+
+              <a
+                href="https://github.com/brianjanes"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="platform-link"
+              >
+                <div className="platform">
+                  <div className="ic-round-apple">
+                    <img
+                      className="group-1000005949"
+                      src={GitHubLogo}
+                      alt="GitHub Logo"
+                    />
+                  </div>
+                  <div className="git-hub-brian">GitHub Brian</div>
                 </div>
-                <div className="git-hub-brad">GitHub Brad</div>
-              </div>
+              </a>
+
+              <a
+                href="https://github.com/BradTheeStallion"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="platform-link"
+              >
+                <div className="platform">
+                  <div className="ic-round-apple">
+                    <img
+                      className="group-1000005949"
+                      src={GitHubLogo}
+                      alt="GitHub Logo"
+                    />
+                  </div>
+                  <div className="git-hub-brad">GitHub Brad</div>
+                </div>
+              </a>
             </div>
           </div>
           <div className="links-column2">
             <div className="linked-in">LinkedIn</div>
             <div className="links4">
-              <div className="platform3">
-                <img
-                  className="group-10000059493"
-                  src={LinkedInLogo}
-                  alt="LinkedIn Logo"
-                />
-                <div className="linked-in-kyle">LinkedIn Kyle</div>
-              </div>
-              <div className="platform2">
-                <div className="ic-round-apple">
+              <a
+                href="https://www.linkedin.com/in/kyle-hollett-8558842a8/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="platform2-link"
+              >
+                <div className="platform3">
                   <img
-                    className="group-10000059494"
+                    className="group-10000059493"
                     src={LinkedInLogo}
                     alt="LinkedIn Logo"
                   />
+                  <div className="linked-in-kyle">LinkedIn Kyle</div>
                 </div>
-                <div className="linked-in-brian">LinkedIn Brian</div>
-              </div>
-              <div className="platform3">
-                <div className="ic-round-apple">
-                  <img
-                    className="group-10000059495"
-                    src={LinkedInLogo}
-                    alt="LinkedIn Logo"
-                  />
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/briandjanes/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="platform2-link"
+              >
+                <div className="platform2">
+                  <div className="ic-round-apple">
+                    <img
+                      className="group-10000059494"
+                      src={LinkedInLogo}
+                      alt="LinkedIn Logo"
+                    />
+                  </div>
+                  <div className="linked-in-brian">LinkedIn Brian</div>
                 </div>
-                <div className="linked-in-brad">LinkedIn Brad</div>
-              </div>
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/bradley-ayers/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="platform2-link"
+              >
+                <div className="platform3">
+                  <div className="ic-round-apple">
+                    <img
+                      className="group-10000059495"
+                      src={LinkedInLogo}
+                      alt="LinkedIn Logo"
+                    />
+                  </div>
+                  <div className="linked-in-brad">LinkedIn Brad</div>
+                </div>
+              </a>
             </div>
           </div>
         </div>
