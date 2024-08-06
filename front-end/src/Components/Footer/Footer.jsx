@@ -1,7 +1,8 @@
 import React from "react";
 import "./Footer.css";
-import LinkedInLogo from "../../Assets/Footer/Group 1000005949.svg";
-import GitHubLogo from "../../Assets/Footer/Group 1000005950.svg";
+import LinkedInLogo from "../../Assets/Footer/Group 1000005950.svg";
+import GitHubLogo from "../../Assets/Footer/Group 1000005949.svg";
+
 import Logo from "../../Assets/Footer/logo.svg";
 
 const Version7Dark = ({ className = "", ...props }) => {
