@@ -80,16 +80,6 @@ const FigmaTest = () => {
                   <div className="_35">-25%</div>
                 </div>
                 <div className="frame-575">
-                  <div className="fill-heart">
-                    <div className="ellipse-12"></div>
-                    <button>
-                      <img
-                        className="heart-small"
-                        src={heartSmall}
-                        alt="heart small"
-                      />
-                    </button>
-                  </div>
                   <div className="fill-eye">
                     <div className="ellipse-13"></div>
                     <div className="quick-view">
