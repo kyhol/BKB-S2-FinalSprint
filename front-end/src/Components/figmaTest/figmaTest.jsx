@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from "react";
 import "./figmaTest.css";
-import heartSmall from "../Assets/Home/heart-small.png";
-import groupSvg from "../Assets/Home/groupsvg.svg";
-import vector0 from "../Assets/Home/Vector0.svg";
-import vector1 from "../Assets/Home/Vector1.svg";
-import vector2 from "../Assets/Home/Vector2.svg";
-import vector3 from "../Assets/Home/Vector3.svg";
-import starHalfFilled from "../Assets/Home/star-half-filled0.svg";
+import heartSmall from "../../Assets/Home/heart-small.png";
+import groupSvg from "../../Assets/Home/groupsvg.svg";
+import vector0 from "../../Assets/Home/Vector0.svg";
+import vector1 from "../../Assets/Home/Vector1.svg";
+import vector2 from "../../Assets/Home/Vector2.svg";
+import vector3 from "../../Assets/Home/Vector3.svg";
+import starHalfFilled from "../../Assets/Home/star-half-filled0.svg";
 import { useProducts } from "../../Context/ProductContext";
 import { useShoppingCart } from "../../Context/ShoppingCartProvider";
+import Button from "../Button/Button"; // Import the Button component
 
 const FigmaTest = () => {
   const { products, loading, error } = useProducts();
@@ -22,7 +23,6 @@ const FigmaTest = () => {
 
   useEffect(() => {
     if (products.length) {
-      // Function to get 4 random products
       const getRandomAlbums = () => {
         const shuffled = [...products].sort(() => 0.5 - Math.random());
         return shuffled.slice(0, 4);
@@ -112,12 +112,11 @@ const FigmaTest = () => {
                     alt={product.title}
                   />
                   {hoveredAlbumId === product.id && (
-                    <button
+                    <Button
+                      text="Add to Cart"
                       className="add-to-cart-button"
                       onClick={() => handleAddToCart(product)}
-                    >
-                      Add to Cart
-                    </button>
+                    />
                   )}
                 </div>
               </div>
