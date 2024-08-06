@@ -2,7 +2,7 @@ import React from "react";
 import "./Footer.css";
 import LinkedInLogo from "../../Assets/Footer/Group 1000005949.svg";
 import GitHubLogo from "../../Assets/Footer/Group 1000005950.svg";
-import PlaceHolder from "../../Assets/Footer/Placeholder.svg";
+import Logo from "../../Assets/Footer/logo.svg";
 
 const Version7Dark = ({ className = "", ...props }) => {
   return (
@@ -19,7 +19,7 @@ const Version7Dark = ({ className = "", ...props }) => {
       </div>
       <div className="container2">
         <div className="logo-and-text">
-          <img className="vector-2" src={PlaceHolder} alt="PlaceHolder" />
+          <img className="vector-2" src={Logo} alt="PlaceHolder" />
           <div className="vinyl-tap">Vinyl Tap</div>
           <div className="a-record-company">A Record Company</div>
         </div>
