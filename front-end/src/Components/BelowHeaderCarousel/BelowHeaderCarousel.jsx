@@ -9,7 +9,7 @@ import belowHeaderImage2 from "../../Assets/BelowHeaderCarousel/BelowHeaderCarou
 import belowHeaderImage3 from "../../Assets/BelowHeaderCarousel/BelowHeaderCarousel3.png";
 import belowHeaderButtonArrowRight from "../../Assets/BelowHeaderCarousel/belowHeaderButtonSlide1.svg";
 import Slide2Button from "../../Assets/BelowHeaderCarousel/belowHeaderButtonSlide2.svg";
-import Slide3Button from "../../Assets/BelowHeaderCarousel/belowHeaderButtonSlide3.svg";
+import { Link } from "react-router-dom";
 const CarouselComponent = () => {
   const slides = [
     {
@@ -24,7 +24,7 @@ const CarouselComponent = () => {
     },
     {
       image: belowHeaderImage3,
-      button: Slide3Button,
+      button: Slide2Button,
       buttonStyle: "Slide3Button",
     },
   ];
@@ -64,9 +64,11 @@ const CarouselComponent = () => {
               className="carousel-image"
             />
             <div className="carousel-content">
-              <button className={`${slide.buttonStyle}`}>
-                <img src={slide.button} alt="button" />
-              </button>
+              <Link to="/records">
+                <button className={`${slide.buttonStyle}`}>
+                  <img src={slide.button} alt="button" />
+                </button>
+              </Link>
             </div>
           </div>
         ))}
