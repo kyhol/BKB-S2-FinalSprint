@@ -9,7 +9,8 @@ import vector3 from "../../Assets/Home/Vector3.svg";
 import starHalfFilled from "../../Assets/Home/star-half-filled0.svg";
 import { useProducts } from "../../Context/ProductContext";
 import { useShoppingCart } from "../../Context/ShoppingCartProvider";
-import Button from "../Button/Button"; // Import the Button component
+import Button from "../Button/Button";
+import FlashSale from "../FlashSale/FlashSale";
 
 const FigmaTest = () => {
   const { products, loading, error } = useProducts();
@@ -60,8 +61,21 @@ const FigmaTest = () => {
     addToCart(product);
   };
 
+  const handleSaleEnd = () => {
+    console.log("Sale has ended, updating products...");
+    if (products.length) {
+      const getRandomAlbums = () => {
+        const shuffled = [...products].sort(() => 0.5 - Math.random());
+        return shuffled.slice(0, 4);
+      };
+
+      setRandomAlbums(getRandomAlbums());
+    }
+  };
+
   return (
     <div className="albumsWrapper">
+      <FlashSale onSaleEnd={handleSaleEnd} />
       <div className="albums-container">
         {randomAlbums.map((product, index) => {
           const discountedPrice = (product.price * 0.75).toFixed(2);
