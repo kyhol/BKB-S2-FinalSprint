@@ -1,5 +1,5 @@
 import React from "react";
-import "./BottomRecordPicture.css"; // Ensure the CSS file is imported
+import "./BottomRecordPicture.css";
 import RecordPicture from "../../Assets/BottomRecordPicture/BottomVinylPicture.png";
 import SpinningRecord from "../../Assets/BottomRecordPicture/SpinningRecord.svg";
 
