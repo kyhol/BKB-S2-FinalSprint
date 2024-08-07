@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import groupSvg from "../../Assets/Home/groupsvg.svg";
+import groupSvg from "../../Assets/Home/groupSvg.svg";
 import vector0 from "../../Assets/Home/Vector0.svg";
 import vector1 from "../../Assets/Home/Vector1.svg";
 import vector2 from "../../Assets/Home/Vector2.svg";
@@ -8,7 +8,6 @@ import starHalfFilled from "../../Assets/Home/star-half-filled0.svg";
 import { useProducts } from "../../Context/ProductContext";
 import { useShoppingCart } from "../../Context/ShoppingCartProvider";
 import Button from "../Button/Button";
-import "./GenreYank.css";
 import "../figmaTest/figmaTest.css";
 
 const AlbumsByGenre = () => {
@@ -24,26 +23,21 @@ const AlbumsByGenre = () => {
 
   useEffect(() => {
     if (products.length) {
-      if (selectedGenre) {
-        setFilteredAlbums(
-          products.filter((product) => product.genre === selectedGenre)
+      const filtered = selectedGenre
+        ? products.filter((product) => product.genre === selectedGenre)
+        : products;
+      setFilteredAlbums(filtered);
+
+      if (filtered.length) {
+        const ratings = filtered.map(() => (Math.random() < 0.5 ? 4.5 : 5));
+        const reviews = filtered.map(
+          () => Math.floor(Math.random() * (139 - 69 + 1)) + 69
         );
-      } else {
-        setFilteredAlbums(products);
+        setStarRatings(ratings);
+        setReviewNumbers(reviews);
       }
     }
   }, [products, selectedGenre]);
-
-  useEffect(() => {
-    if (filteredAlbums.length) {
-      const ratings = filteredAlbums.map(() => (Math.random() < 0.5 ? 4.5 : 5));
-      const reviews = filteredAlbums.map(
-        () => Math.floor(Math.random() * (139 - 69 + 1)) + 69
-      );
-      setStarRatings(ratings);
-      setReviewNumbers(reviews);
-    }
-  }, [filteredAlbums]);
 
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;
@@ -97,15 +91,15 @@ const AlbumsByGenre = () => {
                     <div className="fill-eye">
                       <div className="ellipse-13"></div>
                       <div className="quick-view">
-                        <button
+                        <div
                           onClick={() => handleEnlargeClick(product.coverImage)}
                         >
                           <img
-                            className="group"
                             src={groupSvg}
+                            className="group"
                             alt="group icon"
                           />
-                        </button>
+                        </div>
                       </div>
                     </div>
                   </div>
