@@ -1,10 +1,41 @@
+.wrapperOfFlashSale {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .flashSaleContainer {
   display: flex;
-  flex-direction: column;
-  gap: 20px;
-  row-gap: 0px;
-  align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
   width: 1200px;
-  position: relative;
+  gap: 40px;
+  background-image: linear-gradient(to right, white, rgba(255, 0, 0, 1));
+}
+
+.flashSaleText {
+  font-size: 3em;
+  color: #dc3545;
+  font-weight: bold;
+  animation: flashText 3s infinite alternate;
+}
+
+@keyframes flashText {
+  0% {
+    color: #771c1c;
+  }
+  100% {
+    color: #d61313;
+  }
+}
+
+.countdown {
+  font-size: 2em;
+  margin-top: 10px;
+}
+.flashSaleTextEndsIn {
+  font-size: 3em;
+  font-weight: bold;
 }

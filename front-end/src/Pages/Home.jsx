@@ -7,7 +7,6 @@ const Home = () => {
   return (
     <div>
       <BelowHeaderCarousel />
-      <FlashSale />
       <FigmaTest />
       <DeliveryServiceMoneyBack />
     </div>
