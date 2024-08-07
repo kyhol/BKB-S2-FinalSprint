@@ -1,5 +1,6 @@
 import React from "react";
 import "./Footer.css";
+import "../Button/Button.css";
 import LinkedInLogo from "../../Assets/Footer/Group 1000005950.svg";
 import GitHubLogo from "../../Assets/Footer/Group 1000005949.svg";
 
@@ -23,6 +24,7 @@ const Version7Dark = ({ className = "", ...props }) => {
           <img className="vector-2" src={Logo} alt="PlaceHolder" />
           <div className="vinyl-tap">Vinyl Tap</div>
           <div className="a-record-company">A Record Company</div>
+          <div className="space"><button className="custom-button nav radial-button">About Us</button></div>
         </div>
         <div className="links-column">
           <div className="contact">Contact:</div>
