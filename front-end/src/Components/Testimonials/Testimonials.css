@@ -1,0 +1,31 @@
+.testimonials-container {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.testimonials-container h2 {
+  font-size: 24px;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+}
+
+.testimonials {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.testimonial {
+  max-width: 300px;
+}
+
+.quote {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.author {
+  font-size: 16px;
+}
