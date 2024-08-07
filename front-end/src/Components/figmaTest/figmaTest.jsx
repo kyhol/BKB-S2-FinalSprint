@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./figmaTest.css";
-import heartSmall from "../../Assets/Home/heart-small.png";
-import groupSvg from "../../Assets/Home/groupsvg.svg";
+import groupSvg from "../../Assets/Home/groupSvg.svg";
 import vector0 from "../../Assets/Home/Vector0.svg";
 import vector1 from "../../Assets/Home/Vector1.svg";
 import vector2 from "../../Assets/Home/Vector2.svg";
@@ -29,47 +28,57 @@ const FigmaTest = () => {
         return shuffled.slice(0, 4);
       };
 
-      setRandomAlbums(getRandomAlbums());
-    }
-  }, [products]);
+      const albums = getRandomAlbums();
+      setRandomAlbums(albums);
 
-  useEffect(() => {
-    if (randomAlbums.length) {
-      const ratings = randomAlbums.map(() => (Math.random() < 0.5 ? 4.5 : 5));
-      const reviews = randomAlbums.map(
+      const ratings = albums.map(() => (Math.random() < 0.5 ? 4.5 : 5));
+      const reviews = albums.map(
         () => Math.floor(Math.random() * (139 - 69 + 1)) + 69
       );
       setStarRatings(ratings);
       setReviewNumbers(reviews);
     }
-  }, [randomAlbums]);
+  }, [products]);
 
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;
 
   const handleEnlargeClick = (image) => {
+    console.log("Enlarge Clicked:", image);
     setEnlargedImage(image);
     setIsEnlarged(true);
   };
 
   const handleCloseClick = () => {
+    console.log("Close Clicked");
     setIsEnlarged(false);
     setEnlargedImage(null);
   };
 
-  const handleAddToCart = (product) => {
-    addToCart(product);
+  const handleAddToCartWithDiscount = (product) => {
+    const discountedProduct = {
+      ...product,
+      price: parseFloat((product.price * 0.75).toFixed(2)),
+    };
+    addToCart(discountedProduct, product.stockQuantity);
   };
 
   const handleSaleEnd = () => {
-    console.log("Sale has ended, updating products...");
     if (products.length) {
       const getRandomAlbums = () => {
         const shuffled = [...products].sort(() => 0.5 - Math.random());
         return shuffled.slice(0, 4);
       };
 
-      setRandomAlbums(getRandomAlbums());
+      const albums = getRandomAlbums();
+      setRandomAlbums(albums);
+
+      const ratings = albums.map(() => (Math.random() < 0.5 ? 4.5 : 5));
+      const reviews = albums.map(
+        () => Math.floor(Math.random() * (139 - 69 + 1)) + 69
+      );
+      setStarRatings(ratings);
+      setReviewNumbers(reviews);
     }
   };
 
@@ -119,7 +128,7 @@ const FigmaTest = () => {
                     <Button
                       text="Add to Cart"
                       className="add-to-cart-button-home"
-                      onClick={() => handleAddToCart(product)}
+                      onClick={() => handleAddToCartWithDiscount(product)}
                     />
                   )}
                 </div>

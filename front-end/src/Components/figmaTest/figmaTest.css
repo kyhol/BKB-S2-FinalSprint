@@ -120,6 +120,7 @@
   left: 0%;
   bottom: 0%;
   top: 0%;
+  z-index: 1;
 }
 .quick-view {
   width: 70.59%;
@@ -130,6 +131,7 @@
   bottom: 14.71%;
   top: 14.71%;
   overflow: hidden;
+  z-index: 1;
 }
 .group {
   width: 80.11%;
@@ -140,6 +142,7 @@
   bottom: 20.83%;
   top: 20.83%;
   overflow: visible;
+  z-index: 1000;
 }
 .frame-614 {
   width: 190px;
@@ -398,4 +401,32 @@ button {
 
 .cart-with-flat-discount:hover .add-to-cart-button {
   opacity: 1;
+}
+
+.select-wrapper {
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.not400 {
+  color: var(--button, #000000);
+  text-align: left;
+  font-family: "Poppins-Medium", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  opacity: 0.5;
+  position: relative;
+}
+.albums-container2 {
+  display: flex;
+  flex-wrap: nowrap; /* Ensure items stay in a single row */
+  overflow-x: auto; /* Allow horizontal scrolling */
+  gap: 65px;
+  padding: 16px;
+  width: 1227px;
+}
+.frame-570 {
+  padding: 30px;
 }
