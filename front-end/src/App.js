@@ -6,7 +6,8 @@ import Checkout from "./Pages/Checkout";
 import Home from "./Pages/Home";
 import ProductDetails from "./Pages/ProductDetails";
 import ProductList from "./Pages/ProductList";
-import ShoppingCart from "./Pages/ShoppingCart";
+// import ShoppingCart from "./Pages/ShoppingCart";
+import About from "./Components/About/About"
 import "./index.css";
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Route path="/product/:id" element={<ProductDetails />} />
         {/* <Route path="/cart" element={<ShoppingCart />} /> */}
         <Route path="/checkout" element={<Checkout />} />
+        <Route path="/about" element={<About />} />
       </Routes>
       <Footer />
     </Router>
