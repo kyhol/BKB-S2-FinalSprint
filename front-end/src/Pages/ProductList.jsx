@@ -5,7 +5,6 @@ import Button from "../Components/Button/Button";
 import QuickViewModal from "../Components/Modal/QuickViewModal";
 import Pagination from "../Components/Pagination/Pagination";
 import Loading from "../Components/Loading/Loading";
-import { FaRegEye } from "react-icons/fa";
 import "./Styles/ProductList.css";
 
 const ProductList = () => {
@@ -15,7 +14,8 @@ const ProductList = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 12;
 
-  // Implementing pagination
+  console.log("Products:", products);
+
   const getCurrentProducts = () => {
     const indexOfLastProduct = currentPage * itemsPerPage;
     const indexOfFirstProduct = indexOfLastProduct - itemsPerPage;
@@ -60,8 +60,8 @@ const ProductList = () => {
 
   const handleQuickView = (e, product) => {
     e.stopPropagation();
+    console.log("QuickView triggered for product:", product);
     setSelectedProduct(product);
-    console.log("Selected Image:", product.coverImage);
   };
 
   return (

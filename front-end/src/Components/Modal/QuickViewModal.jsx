@@ -12,36 +12,47 @@ const QuickViewModal = ({ product, onClose, onAddToCart }) => {
         </div>
       );
     }
-    return <div className="quantity-remaining"></div>;
+    return null;
   };
-
-  console.log("Rendering QuickViewModal", product);
 
   return (
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
         <FaX className="modal-close" onClick={onClose} />
-        <img src={product.image} alt={product.name} className="modal-image" />
-        <div className="modal-details">
-          <div className="modal-info">
-            <h2>{product.name}</h2>
-            <p className="modal-price">${product.price}</p>
-            {renderQuantityRemaining(product.quantity)}
+        <div className="modal-layout">
+          <div className="modal-left">
+            <img
+              src={product.coverImage}
+              alt={product.title}
+              className="modal-image"
+            />
           </div>
-          <div className="modal-tracklist">
-            <h3>Track Listing:</h3>
-            <ul>
-              {product.tracks.map((track, index) => (
-                <li key={index}>{track}</li>
-              ))}
-            </ul>
+          <div className="modal-right">
+            <div className="modal-header">
+              <h2 className="modal-title">{product.artist}</h2>
+              <h3 className="modal-artist">{product.title}</h3>
+
+              <p className="modal-price">${product.price.toFixed(2)}</p>
+              {renderQuantityRemaining(product.quantity)}
+            </div>
+            <p className="modal-description">{product.description}</p>
+            <div className="modal-tracklist">
+              <h4>Track Listing:</h4>
+              <ol>
+                {product.tracks.map((track, index) => (
+                  <li key={index}>{track}</li>
+                ))}
+              </ol>
+            </div>
+            <div className="modal-cart-button-div">
+              <Button
+                text="Add to Cart"
+                onClick={() => onAddToCart(product)}
+                className="modal-add-to-cart"
+              />
+            </div>
           </div>
         </div>
-        <Button
-          text="Add to Cart"
-          onClick={() => onAddToCart(product)}
-          className="modal-add-to-cart"
-        />
       </div>
     </div>
   );

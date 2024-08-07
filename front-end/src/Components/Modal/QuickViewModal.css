@@ -13,13 +13,13 @@
 
 .modal-content {
   background-color: white;
-  padding: 2rem;
   border-radius: var(--border-radius);
-  width: 80%;
-  max-width: 1200px;
-  max-height: 90vh;
-  overflow-y: auto;
-  position: fixed;
+  width: 90%;
+  max-width: 1000px;
+  height: 90vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .modal-close {
@@ -29,28 +29,53 @@
   cursor: pointer;
   color: #333;
   transition: transform 0.2s ease;
+  z-index: 1;
 }
 
 .modal-close:hover {
   transform: scale(1.1);
 }
 
-.modal-image {
-  width: 100%;
-  max-height: 50vh;
-  object-fit: contain;
-  margin-bottom: 1rem;
-}
-
-.modal-details {
+.modal-layout {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 1rem;
+  height: 100%;
 }
 
-.modal-info {
+.modal-left {
   flex: 1;
+  padding-inline: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.modal-right {
+  flex: 1;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.modal-header {
+  margin-bottom: 0.5rem;
+}
+
+.modal-artist {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.modal-title {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
 }
 
 .modal-price {
@@ -59,28 +84,54 @@
   margin-bottom: 0.5rem;
 }
 
-.modal-quantity {
-  font-size: 1rem;
+.modal-description {
   margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  max-height: 100px;
+  overflow-y: auto;
 }
 
 .modal-tracklist {
-  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
 }
 
-.modal-tracklist h3 {
+.modal-tracklist h4 {
   margin-bottom: 0.5rem;
+  font-size: 1rem;
 }
 
-.modal-tracklist ul {
-  list-style-type: none;
-  padding-left: 0;
+.modal-tracklist ol {
+  padding-left: 1.5rem;
 }
 
 .modal-tracklist li {
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.15rem;
 }
 
 .modal-add-to-cart {
-  margin-top: 1rem;
+  align-self: flex-start;
+}
+
+.quantity-remaining.hot-buy {
+  color: #ff4500;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.modal-cart-button-div {
+  display: flex;
+  justify-content: flex-end;
+  margin: 1rem 2rem;
+}
+
+.blink-text {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
 }
