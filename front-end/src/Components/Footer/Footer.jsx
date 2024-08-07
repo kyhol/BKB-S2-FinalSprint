@@ -1,12 +1,18 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";  // Import useNavigate hook
 import "./Footer.css";
 import "../Button/Button.css";
 import LinkedInLogo from "../../Assets/Footer/Group 1000005950.svg";
 import GitHubLogo from "../../Assets/Footer/Group 1000005949.svg";
-
 import Logo from "../../Assets/Footer/logo.svg";
 
 const Version7Dark = ({ className = "", ...props }) => {
+  const navigate = useNavigate();
+
+  const handleAboutClick = () => {
+    navigate("/about");
+  };
+
   return (
     <div className={`version-7-dark ${className}`} {...props}>
       <div className="container">
@@ -25,7 +31,7 @@ const Version7Dark = ({ className = "", ...props }) => {
           <div className="vinyl-tap">Vinyl Tap</div>
           <div className="a-record-company">A Record Company</div>
           <div className="space">
-            <button className="custom-button nav radial-button">
+            <button className="custom-button nav radial-button" onClick={handleAboutClick}>
               About Us
             </button>
           </div>
@@ -35,7 +41,7 @@ const Version7Dark = ({ className = "", ...props }) => {
           <div className="links2">
             <div className="kyle-hollett">Kyle Hollett -</div>
             <div className="brian-janes">Brian Janes -</div>
-            <div className="bradley-avyers">Bradley Avyers -</div>
+            <div className="bradley-avyers">Bradley Ayers -</div>
           </div>
         </div>
         <div className="links-column2">

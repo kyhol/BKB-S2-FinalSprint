@@ -1,0 +1,23 @@
+.recordContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.recordPictureContainer {
+  position: relative;
+  width: 80%; /* Adjust this value as needed */
+  max-width: 1200px;
+}
+
+.recordPicture {
+  width: 100%;
+}
+
+.spinningRecord {
+  position: absolute;
+  top: 50%;
+  right: 50px; /* Position it to the right side */
+  transform: translateY(-50%);
+  width: 45%; /* Adjust this value as needed */
+}

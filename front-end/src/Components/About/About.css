@@ -1,17 +1,47 @@
 .about {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 50px;
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px black;
     background-image: url('../../Assets/About/record.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-color: rgba(0, 0, 0, 0.7);
+    margin-bottom: 5%;
+    overflow: hidden;
 }
 
+.about::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.aboutText,
+button {
+    position: relative;
+    z-index: 2;
+}
+
+
 .aboutText {
-    padding: 10%;
+    margin: 10% 10% 3% 10%;
     overflow-y: scroll;
+}
+
+.aboutText p {
+    margin-bottom: 1%;
+}
+
+.about button {
+    margin-bottom: 20%;
 }
