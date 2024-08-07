@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./About.css";
-import "../Button/Button.css";
+import Button from "../Button/Button";
 
 const About = () => {
   const navigate = useNavigate();
@@ -19,9 +19,7 @@ const About = () => {
         <p>Don’t have a record player yet? Reach out to us today for a free consultation to find the perfect machine to play the soundtrack to your memories.</p>
       </div>
       <div className="backToSite">
-        <button className="custom-button nav radial-button" onClick={handleBackToSiteClick}>
-          Back to Site
-        </button>
+        <Button text="Back to Site" onClick={handleBackToSiteClick}/>
       </div>
     </div>
   );

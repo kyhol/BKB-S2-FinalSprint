@@ -1,7 +1,7 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";  // Import useNavigate hook
+import { useNavigate } from "react-router-dom";
 import "./Footer.css";
-import "../Button/Button.css";
+import Button from "../Button/Button";
 import LinkedInLogo from "../../Assets/Footer/Group 1000005950.svg";
 import GitHubLogo from "../../Assets/Footer/Group 1000005949.svg";
 import Logo from "../../Assets/Footer/logo.svg";
@@ -31,9 +31,7 @@ const Version7Dark = ({ className = "", ...props }) => {
           <div className="vinyl-tap">Vinyl Tap</div>
           <div className="a-record-company">A Record Company</div>
           <div className="space">
-            <button className="custom-button nav radial-button" onClick={handleAboutClick}>
-              About Us
-            </button>
+          <Button text="About Us" onClick={handleAboutClick}/>
           </div>
         </div>
         <div className="links-column">

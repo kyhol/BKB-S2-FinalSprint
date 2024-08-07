@@ -22,7 +22,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(241, 191, 27, 0.3);
     z-index: 1;
 }
 
@@ -42,6 +42,6 @@ button {
     margin-bottom: 1%;
 }
 
-.about button {
-    margin-bottom: 20%;
-}
+.backToSite {
+    margin-bottom: 4%;
+} 
