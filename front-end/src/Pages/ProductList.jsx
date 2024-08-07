@@ -8,11 +8,11 @@ import Loading from "../Components/Loading/Loading";
 import "./Styles/ProductList.css";
 
 const ProductList = () => {
-  const addToCart = useShoppingCart();
+  const { addToCart } = useShoppingCart();
   const { products, loading, error } = useProducts();
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 8;
+  const itemsPerPage = 12;
 
   // Implementing pagination
   const getCurrentProducts = () => {
@@ -64,22 +64,22 @@ const ProductList = () => {
   };
 
   return (
-    <div
-      className={`main-content product-layout ${
-        selectedProduct ? "blur-background" : ""
-      }`}
-    >
+    <div className="main-content product-layout">
       <div className="top-of-product">
         <div className="product-list-container">
           {getCurrentProducts().map((product) => (
-            <div
-              className="product-container"
-              key={product.id}
-              onClick={() => handleOpenProduct(product)}
-            >
+            <div className="product-container" key={product.id}>
               <div className="product-content">
                 <h3>{product.name}</h3>
-                <img src={product.coverImage} alt={product.name} />
+                <div className="product-image-container">
+                  <img src={product.coverImage} alt={product.name} />
+                  <Button
+                    text="Quick View"
+                    onClick={(e) => handleQuickView(e, product)}
+                    variant="quick-view"
+                    className="quick-view"
+                  />
+                </div>
                 {renderQuantityRemaining(product.quantity)}
                 <div className="cost-and-button">
                   <span className="record-price">${product.price}</span>
@@ -91,12 +91,6 @@ const ProductList = () => {
                   />
                 </div>
               </div>
-              <Button
-                text="Quick View"
-                onClick={(e) => handleQuickView(e, product)}
-                variant="quick-view"
-                className="quick-view"
-              />
             </div>
           ))}
         </div>

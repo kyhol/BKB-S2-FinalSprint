@@ -2,18 +2,22 @@ import React from "react";
 import "./Header.css";
 import { useNavigate } from "react-router-dom";
 import { FaShippingFast } from "react-icons/fa";
-
 import Button from "../Button/Button";
 import { useShoppingCart } from "../../Context/ShoppingCartProvider";
+import Logo from "../../Assets/Footer/logo.svg";
 
 const Header = () => {
   const { cartItems } = useShoppingCart();
-
-  const [cartItemsCount, setCartItemsCount] = React.useState(2);
+  // const [cartItemsCount, setCartItemsCount] = React.useState(2);
   const navigate = useNavigate();
 
   const onTitleClick = () => {
     navigate("/");
+  };
+
+  const onCartClick = () => {
+    console.log("Cart button clicked");
+    navigate("/checkout");
   };
 
   return (
@@ -26,26 +30,11 @@ const Header = () => {
         </p>
       </div>
       <div className="title-section">
+        <img src={Logo} alt="PlaceHolder" onClick={onTitleClick} />
         <h2 onClick={onTitleClick}>Vinyl Tap</h2>
       </div>
       <div className="nav-section">
         <div className="left-side">
-          {/* {(window.location.pathname === "/records")  ? ({
-            <Button
-              text="Home"
-              variant="nav"
-              onClick={() => {
-                navigate("/");
-              }}
-            />;})
-          } else {
-            <Button
-              text="Records"
-              variant="nav"
-              onClick={handleNavToRecords}
-            />;
-          } */}
-
           {window.location.pathname === "/records" ? (
             <Button
               text="Home"
@@ -67,8 +56,8 @@ const Header = () => {
         <div className="right-side">
           <Button
             text="Cart"
-            count={cartItemsCount}
-            onClick={() => console.log("Cart button clicked")}
+            count={cartItems.length}
+            onClick={onCartClick}
             variant="cart"
           />
         </div>
