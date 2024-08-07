@@ -6,9 +6,9 @@ const Loading = () => {
     <svg className="loader-svg" viewBox="0 0 400 400">
       <g id="record">
         <circle r="200" cx="200" cy="200" />
-        <circle class="line" r="180" cx="200" cy="200" />
-        <circle class="line" r="160" cx="200" cy="200" />
-        <circle class="line" r="140" cx="200" cy="200" />
+        <circle className="line" r="180" cx="200" cy="200" />
+        <circle className="line" r="160" cx="200" cy="200" />
+        <circle className="line" r="140" cx="200" cy="200" />
         <circle id="label" cx="200" cy="200" r="65" />
         <text y="180" x="165" className="text">
           Vinyl Tap

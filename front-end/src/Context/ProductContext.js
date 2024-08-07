@@ -36,10 +36,6 @@ export function ProductProvider({ children }) {
     fetchProducts();
   }, []);
 
-  console.log(artists);
-  console.log(genres);
-  console.log(albums);
-
   return (
     <ProductContext.Provider
       value={{ products, loading, error, artists, genres }}

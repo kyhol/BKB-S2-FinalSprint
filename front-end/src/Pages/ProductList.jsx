@@ -5,6 +5,7 @@ import Button from "../Components/Button/Button";
 import QuickViewModal from "../Components/Modal/QuickViewModal";
 import Pagination from "../Components/Pagination/Pagination";
 import Loading from "../Components/Loading/Loading";
+import { FaRegEye } from "react-icons/fa";
 import "./Styles/ProductList.css";
 
 const ProductList = () => {

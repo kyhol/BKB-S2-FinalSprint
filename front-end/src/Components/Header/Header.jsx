@@ -7,7 +7,7 @@ import { useShoppingCart } from "../../Context/ShoppingCartProvider";
 import Logo from "../../Assets/Footer/logo.svg";
 
 const Header = () => {
-  const { cartItems } = useShoppingCart();
+  const { cartItems, getTotalItems } = useShoppingCart();
   // const [cartItemsCount, setCartItemsCount] = React.useState(2);
   const navigate = useNavigate();
 
@@ -56,7 +56,7 @@ const Header = () => {
         <div className="right-side">
           <Button
             text="Cart"
-            count={cartItems.length}
+            count={getTotalItems()}
             onClick={onCartClick}
             variant="cart"
           />
