@@ -1,0 +1,22 @@
+.wrapperOfGenreText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.genreTextContainer {
+  display: flex;
+  justify-content: flex-start;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  width: 1200px;
+  gap: 40px;
+  background-image: linear-gradient(to right, white, rgb(17, 16, 16));
+}
+
+.genreText {
+  font-size: 3em;
+  color: #131212;
+  font-weight: bold;
+}
