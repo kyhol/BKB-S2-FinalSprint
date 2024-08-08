@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./Styles/ShoppingCart.css";
 import Button from "../Components/Button/Button";
 import { FaRegTrashAlt } from "react-icons/fa";
@@ -11,24 +11,12 @@ const ShoppingCart = () => {
     useShoppingCart();
   const { products } = useProducts();
   const [showConfirmDialog, setShowConfirmDialog] = useState(false);
-  const [stockWarning, setStockWarning] = useState(null);
   const navigate = useNavigate();
 
-  useEffect(() => {
-    if (stockWarning) {
-      const timer = setTimeout(() => {
-        setStockWarning(null);
-      }, 5000);
-
-      return () => clearTimeout(timer);
-    }
-  }, [stockWarning]);
-
-  let subtotal = 0;
-  for (let i = 0; i < cartItems.length; i++) {
-    subtotal += cartItems[i].price * cartItems[i].quantity;
-  }
-
+  let subtotal = cartItems.reduce(
+    (total, item) => total + item.price * item.quantity,
+    0
+  );
   const tax = subtotal * 0.15;
   let shipping = subtotal >= 50 ? 0 : 10;
   const total = subtotal + tax + shipping;
@@ -45,6 +33,11 @@ const ShoppingCart = () => {
   const getProductStock = (productId) => {
     const product = products.find((p) => p.id === productId);
     return product ? product.quantity : 0;
+  };
+
+  const handleAddToCart = (item) => {
+    const stockQuantity = getProductStock(item.id);
+    addToCart(item, stockQuantity);
   };
 
   return (
@@ -117,17 +110,7 @@ const ShoppingCart = () => {
                       {item.quantity}
                       <div
                         className="adjust-quantity"
-                        onClick={() => {
-                          const stockQuantity = getProductStock(item.id);
-                          if (item.quantity < stockQuantity) {
-                            addToCart(item);
-                          } else {
-                            setStockWarning({
-                              id: item.id,
-                              message: `Only (${stockQuantity}) items in stock.`,
-                            });
-                          }
-                        }}
+                        onClick={() => handleAddToCart(item)}
                       >
                         +
                       </div>
@@ -138,11 +121,6 @@ const ShoppingCart = () => {
                       onClick={() => removeAllOfItem(item.id)}
                     />
                   </div>
-                  {stockWarning && stockWarning.id === item.id && (
-                    <div className="stock-warning">
-                      <span>{stockWarning.message}</span>
-                    </div>
-                  )}
                 </div>
               ))
             )}

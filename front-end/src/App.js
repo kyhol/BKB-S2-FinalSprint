@@ -9,6 +9,7 @@ import ShoppingCart from "./Pages/ShoppingCart";
 import About from "./Components/About/About";
 import "./index.css";
 import ScrollToTop from "./Components/ScrollToTop/ScrollToTop";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
@@ -22,6 +23,23 @@ function App() {
         <Route path="/checkout" element={<ShoppingCart />} />
         <Route path="/about" element={<About />} />
       </Routes>
+      <Toaster
+        position="bottom-right"
+        toastOptions={{
+          success: {
+            style: {
+              background: "green",
+              color: "whitesmoke",
+            },
+          },
+          error: {
+            style: {
+              background: "red",
+              color: "whitesmoke",
+            },
+          },
+        }}
+      />
       <Footer />
     </Router>
   );

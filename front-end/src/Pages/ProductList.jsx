@@ -41,15 +41,15 @@ const ProductList = () => {
   }
 
   const handleOpenProduct = (id) => {
-    console.log("Opening product details");
-    console.log(id);
+    // console.log("Opening product details");
+    // console.log(id);
 
     navigate(`/product/${id}`);
   };
 
   const handleAddToCart = (e, product) => {
     e.stopPropagation();
-    addToCart(product);
+    addToCart(product, product.quantity);
   };
 
   const renderQuantityRemaining = (quantity) => {
