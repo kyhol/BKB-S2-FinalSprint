@@ -13,7 +13,7 @@ header {
 }
 
 .sale-popup-container {
-  height: 2rem; /* Set this to match the height of your sale popup */
+  height: 2rem;
 }
 
 .sale-popup,
@@ -112,7 +112,51 @@ header h2:hover {
 
 @media (max-width: 768px) {
   .title-section {
-    height: 18rem;
     padding: 1rem 2rem;
+  }
+
+  header h2 {
+    font-size: 1.5rem;
+  }
+
+  .title-section img {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .nav-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .left-side,
+  .right-side {
+    width: 100%;
+    justify-content: flex-start;
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title-section {
+    padding: 0.5rem 1rem;
+  }
+
+  header h2 {
+    font-size: 1.2rem;
+  }
+
+  .title-section img {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .sale-popup-text {
+    font-size: 0.8rem;
+  }
+
+  .shipping-icon {
+    font-size: 1rem;
   }
 }

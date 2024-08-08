@@ -1,10 +1,13 @@
-// contexts/ProductContext.js
-import React, { createContext, useContext, useEffect, useState } from "react";
+import React, {
+  createContext,
+  useContext,
+  useEffect,
+  useState,
+  useCallback,
+} from "react";
 
-// Create the context
 const ProductContext = createContext();
 
-// Create a provider component
 export function ProductProvider({ children }) {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -13,39 +16,51 @@ export function ProductProvider({ children }) {
   const [artists, setArtists] = useState([]);
   const [albums, setAlbums] = useState([]);
 
-  useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const response = await fetch("http://localhost:8000/records");
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        const data = await response.json();
-        // console.log(data);
-        setProducts(data);
-        setArtists([...new Set(data.map((product) => product.artist))]);
-        setGenres([...new Set(data.map((product) => product.genre))]);
-        setAlbums([...new Set(data.map((product) => product.title))]);
-      } catch (error) {
-        setError(error.message);
-      } finally {
-        setLoading(false);
+  const fetchProducts = useCallback(async () => {
+    try {
+      setLoading(true);
+      const response = await fetch("http://localhost:8000/records");
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
       }
-    };
-
-    fetchProducts();
+      const data = await response.json();
+      setProducts(data);
+      setArtists([...new Set(data.map((product) => product.artist))]);
+      setGenres([...new Set(data.map((product) => product.genre))]);
+      setAlbums([...new Set(data.map((product) => product.title))]);
+      setError(null);
+    } catch (error) {
+      setError(error.message);
+    } finally {
+      setLoading(false);
+    }
   }, []);
+
+  useEffect(() => {
+    fetchProducts();
+  }, [fetchProducts]);
+
+  const refreshProducts = () => {
+    fetchProducts();
+  };
 
   return (
     <ProductContext.Provider
-      value={{ products, loading, error, artists, genres, albums }}
+      value={{
+        products,
+        loading,
+        error,
+        artists,
+        genres,
+        albums,
+        refreshProducts,
+      }}
     >
       {children}
     </ProductContext.Provider>
   );
 }
 
-// Custom hook to use the product context
 export function useProducts() {
   return useContext(ProductContext);
 }

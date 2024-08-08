@@ -1,10 +1,12 @@
 import React, { createContext, useContext, useState } from "react";
 import { toast } from "react-hot-toast";
+import { useProducts } from "./ProductContext";
 
 const ShoppingCartContext = createContext();
 
 export function ShoppingCartProvider({ children }) {
   const [cartItems, setCartItems] = useState([]);
+  const { refreshProducts } = useProducts();
 
   const addToCart = (item, stockQuantity) => {
     setCartItems((prevItems) => {
@@ -62,6 +64,63 @@ export function ShoppingCartProvider({ children }) {
     return item ? item.quantity < quantity : true;
   };
 
+  const checkout = async () => {
+    try {
+      toast.loading("Processing your order...");
+
+      // Fetch current records data
+      const response = await fetch("http://localhost:8000/records");
+      if (!response.ok) {
+        throw new Error("Failed to fetch records");
+      }
+      const records = await response.json();
+
+      // Update quantities
+      const updatedRecords = records.map((record) => {
+        const cartItem = cartItems.find((item) => item.id === record.id);
+        if (cartItem) {
+          if (record.quantity < cartItem.quantity) {
+            throw new Error(`Not enough stock for ${record.title}`);
+          }
+          return { ...record, quantity: record.quantity - cartItem.quantity };
+        }
+        return record;
+      });
+
+      // Update each record individually
+      for (const record of updatedRecords) {
+        const updateResponse = await fetch(
+          `http://localhost:8000/records/${record.id}`,
+          {
+            method: "PUT",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(record),
+          }
+        );
+        if (!updateResponse.ok) {
+          throw new Error(`Failed to update record ${record.id}`);
+        }
+      }
+
+      // If successful, empty the cart
+      setCartItems([]);
+
+      // Refresh the products data
+      refreshProducts();
+
+      toast.dismiss();
+      toast.success("Order processed successfully!");
+    } catch (error) {
+      console.error("Checkout error:", error);
+      toast.dismiss();
+      toast.error(
+        error.message || "An error occurred during checkout. Please try again."
+      );
+    }
+  };
+
   return (
     <ShoppingCartContext.Provider
       value={{
@@ -72,6 +131,7 @@ export function ShoppingCartProvider({ children }) {
         emptyCart,
         getTotalItems,
         isItemInStock,
+        checkout,
       }}
     >
       {children}
