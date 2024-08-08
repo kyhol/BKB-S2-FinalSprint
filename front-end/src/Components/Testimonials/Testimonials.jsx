@@ -21,8 +21,9 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <div className="testimonials-container">
+    <div className="testimontaltoptext">
       <h2>TESTIMONIALS</h2>
+
       <div className="testimonials">
         {testimonials.map((testimonial, index) => (
           <div className="testimonial" key={index}>

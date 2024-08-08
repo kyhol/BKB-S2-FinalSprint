@@ -20,3 +20,21 @@
   color: #131212;
   font-weight: bold;
 }
+.testimonialsTextSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+@media (max-width: 1024px) {
+  .genreTextContainer {
+    width: 800px;
+  }
+  .genreText {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 480px) {
+}
