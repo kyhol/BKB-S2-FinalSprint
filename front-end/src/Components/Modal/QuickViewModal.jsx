@@ -2,8 +2,10 @@ import React from "react";
 import Button from "../Button/Button";
 import { FaX } from "react-icons/fa6";
 import "./QuickViewModal.css";
+import { useNavigate } from "react-router-dom";
 
 const QuickViewModal = ({ product, onClose, onAddToCart }) => {
+  const navigate = useNavigate();
   const renderQuantityRemaining = (quantity) => {
     if (quantity <= 10) {
       return (

@@ -9,7 +9,7 @@ const Button = ({ text, count, onClick, className, variant, isCheckout }) => {
 
   const renderButtonContent = () => {
     switch (variant) {
-      case "quick-view":
+      case "quick-view-button":
         return (
           <>
             <FaRegEye />

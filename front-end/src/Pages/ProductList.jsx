@@ -65,7 +65,7 @@ const ProductList = () => {
 
   const handleQuickView = (e, product) => {
     e.stopPropagation();
-    console.log("QuickView triggered for product:", product);
+    // console.log("QuickView triggered for product:", product);
     setSelectedProduct(product);
   };
 
@@ -86,11 +86,17 @@ const ProductList = () => {
                   <Button
                     text="Quick View"
                     onClick={(e) => handleQuickView(e, product)}
-                    variant="quick-view"
-                    className="quick-view"
+                    variant="quick-view-button"
+                    className="quick-view-button"
                   />
                 </div>
                 {renderQuantityRemaining(product.quantity)}
+                <div className="album-and-artist">
+                  <span>
+                    <strong>{product.artist}</strong>
+                  </span>
+                  <span>{product.title}</span>
+                </div>
                 <div className="cost-and-button">
                   <span className="record-price">${product.price}</span>
                   <Button
