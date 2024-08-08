@@ -7,16 +7,15 @@ import Loading from "../Components/Loading/Loading";
 import "./Styles/ProductDetails.css";
 
 const ProductDetails = () => {
-  const   
- { products, loading, error } = useProducts();
+  const { products, loading, error } = useProducts();
   const { id } = useParams();
   const [selectedProduct, setSelectedProduct] = useState(null);
-  
+
   const { addToCart } = useShoppingCart();
 
   const handleAddToCart = (product) => {
-      addToCart(product);
-    };
+    addToCart(product);
+  };
 
   useEffect(() => {
     const findProduct = () => {
@@ -48,21 +47,14 @@ const ProductDetails = () => {
     return <div>Product not found.</div>;
   }
 
-  const {
-    coverImage,
-    title,
-    artist,
-    price,
-    description,
-    tracks,
-    quantity,
-  } = selectedProduct;
+  const { coverImage, title, artist, price, description, tracks, quantity } =
+    selectedProduct;
 
   const renderQuantityRemaining = (quantity) => {
     if (quantity <= 10) {
       return (
         <div className="quantity-remaining hot-buy">
-           Only <span className="blink-text">{quantity}</span> left! 
+          Only <span className="blink-text">{quantity}</span> left!
         </div>
       );
     }
@@ -73,15 +65,15 @@ const ProductDetails = () => {
     <div className="main-content product-details">
       <div className="product-details-container">
         <div className="half">
-        <div className="product-image-container">
-          <img src={coverImage} alt={title} />
-        </div>
-        <br />
+          <div className="product-image-container">
+            <img src={coverImage} alt={title} />
+          </div>
+          <br />
           <h2 className="product-title">{artist}</h2>
           <h3 className="product-artist">{title}</h3>
           <p className="product-price">${price.toFixed(2)}</p>
           {renderQuantityRemaining(quantity)}
-          </div>
+        </div>
         <div className="half">
           <p className="product-description">{description}</p>
           <br />
@@ -95,12 +87,12 @@ const ProductDetails = () => {
           </div>
           <br />
           <Button
-          text="Add to Cart"
-           onClick={() => handleAddToCart(selectedProduct)}
+            text="Add to Cart"
+            onClick={() => handleAddToCart(selectedProduct)}
           />
-          </div>
         </div>
       </div>
+    </div>
   );
 };
 

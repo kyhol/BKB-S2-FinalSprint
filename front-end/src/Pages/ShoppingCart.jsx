@@ -7,8 +7,14 @@ import { useProducts } from "../Context/ProductContext";
 import { useNavigate } from "react-router-dom";
 
 const ShoppingCart = () => {
-  const { cartItems, addToCart, removeFromCart, removeAllOfItem, emptyCart } =
-    useShoppingCart();
+  const {
+    cartItems,
+    addToCart,
+    removeFromCart,
+    removeAllOfItem,
+    emptyCart,
+    checkout,
+  } = useShoppingCart();
   const { products } = useProducts();
   const [showConfirmDialog, setShowConfirmDialog] = useState(false);
   const navigate = useNavigate();
@@ -22,7 +28,8 @@ const ShoppingCart = () => {
   const total = subtotal + tax + shipping;
 
   const handleProceedToCheckout = () => {
-    console.log("Proceeding to checkout");
+    checkout();
+    // console.log("Proceeding to checkout");
   };
 
   const calcItemTotal = (item) => {
