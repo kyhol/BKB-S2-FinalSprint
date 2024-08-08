@@ -88,6 +88,14 @@
   text-decoration: underline;
 }
 
+.album-and-artist {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: left;
+  margin: 0 0 0.5rem 0.5rem;
+}
+
 .cost-and-button {
   display: flex;
   justify-content: space-between;
