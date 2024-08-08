@@ -7,8 +7,9 @@ import Home from "./Pages/Home";
 import ProductDetails from "./Pages/ProductDetails";
 import ProductList from "./Pages/ProductList";
 // import ShoppingCart from "./Pages/ShoppingCart";
-import About from "./Components/About/About"
+import About from "./Components/About/About";
 import "./index.css";
+import ShoppingCart from "./Pages/ShoppingCart";
 
 function App() {
   return (
@@ -18,8 +19,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/records" element={<ProductList />} />
         <Route path="/product/:id" element={<ProductDetails />} />
-        {/* <Route path="/cart" element={<ShoppingCart />} /> */}
-        <Route path="/checkout" element={<Checkout />} />
+        <Route path="/checkout" element={<ShoppingCart />} />
         <Route path="/about" element={<About />} />
       </Routes>
       <Footer />

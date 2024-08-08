@@ -1,6 +1,10 @@
 header {
+  width: 100%;
   color: var(--color-darkest);
   z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 .sale-popup {
@@ -11,9 +15,6 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
 }
 
@@ -36,7 +37,6 @@ header h2 {
   letter-spacing: 0.25rem;
   text-shadow: 4px 3px 3px rgba(0, 0, 0, 0.8);
   font-size: 2rem;
-  margin: 0;
   color: #ffad33;
 }
 
@@ -48,14 +48,13 @@ header h2:hover {
 
 .title-section {
   background-image: url(../../Assets/HeaderImage.jpg);
-  background-position: center;
+  background-position: bottom;
   background-size: cover;
   color: #ffad33;
-  height: 24rem;
   padding: 1rem 4rem;
   display: flex;
   justify-content: flex-start;
-  align-items: flex-end;
+  align-items: center;
   text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
 }
 
@@ -64,11 +63,16 @@ header h2:hover {
   height: 4rem;
 }
 
+.title-section img:hover {
+  cursor: pointer;
+}
+
 .nav-section {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0.5rem 0;
+  border-bottom: 1px solid #ffad33;
 }
 
 .right-side {
