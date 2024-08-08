@@ -106,15 +106,15 @@ const FigmaTest = () => {
                   <div className="fill-eye">
                     <div className="ellipse-13"></div>
                     <div className="quick-view">
-                      <button
+                      <div
                         onClick={() => handleEnlargeClick(product.coverImage)}
                       >
                         <img
-                          className="group"
                           src={groupSvg}
+                          className="group"
                           alt="group icon"
                         />
-                      </button>
+                      </div>
                     </div>
                   </div>
                 </div>
