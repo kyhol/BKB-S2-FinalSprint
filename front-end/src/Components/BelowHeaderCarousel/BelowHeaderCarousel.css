@@ -4,8 +4,16 @@
   width: 100%;
   max-width: 1200px;
   margin: auto;
+  margin-top: 100px;
+  margin-bottom: 40px;
 }
-
+.carouselSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
 .carousel-slide {
   position: relative;
 }
@@ -69,12 +77,30 @@ button img {
 }
 
 .buttonRightPointing {
-  margin-left: 280px;
-  margin-bottom: 20px;
+  margin-left: 17.5rem; /* 280px / 16 = 17.5rem */
+  margin-bottom: 1.25rem; /* 20px / 16 = 1.25rem */
 }
 .Slide2Button {
-  margin-left: 445px;
+  margin-left: 27.8125rem; /* 445px / 16 = 27.8125rem */
 }
 .Slide3Button {
-  margin-left: 888px;
+  margin-left: 55.5rem; /* 888px / 16 = 55.5rem */
+}
+
+@media (max-width: 64rem) {
+  /* 1024px / 16 = 64rem */
+  .carousel-container {
+    max-width: 50rem; /* 800px / 16 = 50rem */
+    margin-bottom: 2.5rem; /* 40px / 16 = 2.5rem */
+  }
+  .buttonRightPointing {
+    margin-left: 11.25rem; /* 180px / 16 = 11.25rem */
+    margin-bottom: 0rem; /* 0px = 0rem */
+  }
+  .Slide2Button {
+    margin-left: 16.75rem; /* 268px / 16 = 16.75rem */
+  }
+  .Slide3Button {
+    margin-left: 35rem; /* 560px / 16 = 35rem */
+  }
 }

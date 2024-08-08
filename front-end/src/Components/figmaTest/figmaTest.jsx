@@ -83,100 +83,118 @@ const FigmaTest = () => {
   };
 
   return (
-    <div className="albumsWrapper">
-      <FlashSale onSaleEnd={handleSaleEnd} />
-      <div className="albums-container">
-        {randomAlbums.map((product, index) => {
-          const discountedPrice = (product.price * 0.75).toFixed(2);
-          const starRating = starRatings[index] || 0;
-          const reviewNumber = reviewNumbers[index] || 0;
+    <div className="albumsSection">
+      <div className="albumsWrapper">
+        <FlashSale onSaleEnd={handleSaleEnd} />
+        <div className="albums-container">
+          {randomAlbums.map((product, index) => {
+            const discountedPrice = (product.price * 0.75).toFixed(2);
+            const starRating = starRatings[index] || 0;
+            const reviewNumber = reviewNumbers[index] || 0;
 
-          return (
-            <div
-              className="cart-with-flat-discount"
-              key={product.id}
-              onMouseEnter={() => setHoveredAlbumId(product.id)}
-              onMouseLeave={() => setHoveredAlbumId(null)}
-            >
-              <div className="frame-570">
-                <div className="discount-percent">
-                  <div className="_35">-25%</div>
-                </div>
-                <div className="frame-575">
-                  <div className="fill-eye">
-                    <div className="ellipse-13"></div>
-                    <div className="quick-view">
-                      <div
-                        onClick={() => handleEnlargeClick(product.coverImage)}
-                      >
-                        <img
-                          src={groupSvg}
-                          className="group"
-                          alt="group icon"
-                        />
+            return (
+              <div
+                className="cart-with-flat-discount"
+                key={product.id}
+                onMouseEnter={() => setHoveredAlbumId(product.id)}
+                onMouseLeave={() => setHoveredAlbumId(null)}
+              >
+                <div className="frame-570">
+                  <div className="discount-percent">
+                    <div className="_35">-25%</div>
+                  </div>
+                  <div className="frame-575">
+                    <div className="fill-eye">
+                      <div className="ellipse-13"></div>
+                      <div className="quick-view">
+                        <div
+                          onClick={() => handleEnlargeClick(product.coverImage)}
+                        >
+                          <img
+                            src={groupSvg}
+                            className="group"
+                            alt="group icon"
+                          />
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div className="frame-614">
-                  <img
-                    className="centered-image"
-                    src={product.coverImage}
-                    alt={product.title}
-                  />
-                  {hoveredAlbumId === product.id && (
-                    <Button
-                      text="Add to Cart"
-                      className="add-to-cart-button-home"
-                      onClick={() => handleAddToCartWithDiscount(product)}
+                  <div className="frame-614">
+                    <img
+                      className="centered-image"
+                      src={product.coverImage}
+                      alt={product.title}
                     />
-                  )}
-                </div>
-              </div>
-              <div className="frame-569">
-                <div className="artist-name">{product.artist}</div>
-                <div className="s-series-comfort-chair">{product.title}</div>
-                <div className="frame-567">
-                  <div className="_375">${discountedPrice}</div>
-                  <div className="_400">${product.price}</div>
-                </div>
-                <div className="frame-566">
-                  <div className="stars">
-                    <img className="vector" src={vector0} alt="star vector 0" />
-                    <img className="vector" src={vector1} alt="star vector 1" />
-                    <img className="vector" src={vector2} alt="star vector 2" />
-                    <img className="vector" src={vector3} alt="star vector 3" />
-                    {starRating === 5 ? (
-                      <img
-                        className="vector"
-                        src={vector3}
-                        alt="star vector 4"
-                      />
-                    ) : (
-                      <img
-                        className="star-half-filled"
-                        src={starHalfFilled}
-                        alt="half-filled star"
+                    {hoveredAlbumId === product.id && (
+                      <Button
+                        text="Add to Cart"
+                        className="add-to-cart-button-home"
+                        onClick={() => handleAddToCartWithDiscount(product)}
                       />
                     )}
                   </div>
-                  <div className="_99">({reviewNumber})</div>
+                </div>
+                <div className="frame-569">
+                  <div className="artist-name">{product.artist}</div>
+                  <div className="s-series-comfort-chair">{product.title}</div>
+                  <div className="frame-567">
+                    <div className="_375">${discountedPrice}</div>
+                    <div className="_400">${product.price}</div>
+                  </div>
+                  <div className="frame-566">
+                    <div className="stars">
+                      <img
+                        className="vector"
+                        src={vector0}
+                        alt="star vector 0"
+                      />
+                      <img
+                        className="vector"
+                        src={vector1}
+                        alt="star vector 1"
+                      />
+                      <img
+                        className="vector"
+                        src={vector2}
+                        alt="star vector 2"
+                      />
+                      <img
+                        className="vector"
+                        src={vector3}
+                        alt="star vector 3"
+                      />
+                      {starRating === 5 ? (
+                        <img
+                          className="vector"
+                          src={vector3}
+                          alt="star vector 4"
+                        />
+                      ) : (
+                        <img
+                          className="star-half-filled"
+                          src={starHalfFilled}
+                          alt="half-filled star"
+                        />
+                      )}
+                    </div>
+                    <div className="_99">({reviewNumber})</div>
+                  </div>
                 </div>
               </div>
+            );
+          })}
+          {isEnlarged && (
+            <div className="overlay" onClick={handleCloseClick}>
+              <div className="enlarged-image-container">
+                <img
+                  className="enlarged-image"
+                  src={enlargedImage}
+                  alt="Enlarged"
+                />
+              </div>
             </div>
-          );
-        })}
-        {isEnlarged && (
-          <div className="overlay" onClick={handleCloseClick}>
-            <div className="enlarged-image-container">
-              <img
-                className="enlarged-image"
-                src={enlargedImage}
-                alt="Enlarged"
-              />
-            </div>
-          </div>
-        )}
+          )}
+        </div>
       </div>
     </div>
   );

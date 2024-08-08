@@ -39,3 +39,38 @@
   font-size: 3em;
   font-weight: bold;
 }
+
+@media (max-width: 1024px) {
+  .flashSaleContainer {
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    width: 800px;
+    flex-direction: row;
+    gap: 20px;
+  }
+  .flashSaleText {
+    font-size: 1.5em;
+    color: #dc3545;
+    font-weight: bold;
+    animation: flashText 3s infinite alternate;
+  }
+  .flashSaleTextEndsIn {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  .countdown {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    margin-top: 0px;
+  }
+  .carouselSection {
+    margin-top: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+}
