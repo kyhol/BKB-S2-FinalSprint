@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import groupSvg from "../../Assets/Home/groupSvg.svg";
+import groupSvg from "../../Assets/Home/groupsvg.svg";
 import vector0 from "../../Assets/Home/Vector0.svg";
 import vector1 from "../../Assets/Home/Vector1.svg";
 import vector2 from "../../Assets/Home/Vector2.svg";
