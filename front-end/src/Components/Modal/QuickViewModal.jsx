@@ -15,6 +15,13 @@ const QuickViewModal = ({ product, onClose, onAddToCart }) => {
     return null;
   };
 
+  const handleOpenProduct = (id) => {
+    console.log("Opening product details");
+    console.log(id);
+
+    navigate(`/product/${id}`);
+  };
+
   return (
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
@@ -45,6 +52,10 @@ const QuickViewModal = ({ product, onClose, onAddToCart }) => {
               </ol>
             </div>
             <div className="modal-cart-button-div">
+              <Button
+                text="View Product"
+                onClick={() => handleOpenProduct(product.id)}
+              />
               <Button
                 text="Add to Cart"
                 onClick={() => onAddToCart(product)}

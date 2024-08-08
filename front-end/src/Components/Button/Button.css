@@ -1,114 +1,196 @@
+/* Base styles for all custom buttons */
 .custom-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.5rem 1rem;
-  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  font-size: 1rem;
   color: #ffffff;
   border: none;
-  border-radius: var(--border-radius);
+  border-radius: 8px;
   cursor: pointer;
-  transition: background 0.3s ease, transform 0.3s ease;
-  box-shadow: var(--box-shadow);
+  transition: all 0.3s ease;
+  background-color: #ffad33;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
 }
 
+.custom-button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transform: translateX(-100%);
+  transition: 0.6s;
+}
+
+.custom-button:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 4px 8px rgba(255, 173, 51, 0.3);
+  background-color: #ff9900;
+}
+
+.custom-button:hover::after {
+  transform: translateX(100%);
+}
+
+/* Radial button variant */
 .radial-button {
-  background: radial-gradient(circle, #db4444 0%, #a83434 50%, #752424 100%);
+  background: linear-gradient(135deg, #ffad33 0%, #ff9900 100%);
 }
 
 .radial-button:hover {
-  transform: scale(1.05);
-  background: radial-gradient(circle, #e85555 0%, #b94545 50%, #863535 100%);
+  background: linear-gradient(135deg, #ffbe5c 0%, #ffad33 100%);
 }
 
+/* Add to cart and checkout button styles */
+.add-to-cart-button,
 .checkout-button {
-  width: 100%;
-  margin-top: 1rem;
-  background-color: #28a745;
-}
-
-.checkout-button:hover {
-  background-color: #218838;
-}
-
-.custom-button.quick-view {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0.8);
-  opacity: 0;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  z-index: 10;
-  color: white;
-  border-radius: var(--border-radius);
-  height: 3rem;
-}
-
-.custom-button:not(.quick-view) {
-  opacity: 1;
-}
-
-.custom-button.quick-view:hover {
-  transform: translate(-50%, -50%) scale(0.85);
-}
-
-.add-to-cart-button {
-  padding: 0.5rem 1rem;
-  border-radius: var(--border-radius);
   transition: all 0.3s ease;
 }
 
+.add-to-cart-button:hover,
+.checkout-button:hover {
+  letter-spacing: 1px;
+}
+
+/* Updated Quick view button styles */
+.quick-view {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 10;
+  background-color: rgba(255, 173, 51, 0.9);
+  padding: 0.5rem 1rem;
+  height: 40px;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.product-container:hover .quick-view {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.quick-view:hover {
+  background-color: rgba(255, 153, 0, 0.9);
+}
+
+/* Ensure icon and text are aligned properly */
+.quick-view svg {
+  margin-right: 0.25rem;
+}
+
+/* Add to cart button for home page */
 .add-to-cart-button-home {
   position: absolute;
   width: 100%;
   bottom: 0;
-  background: radial-gradient(circle, #db4444 0%, #a83434 50%, #752424 100%);
+  background-color: #ffad33;
   color: #fff;
   border: none;
-  padding: 10px 0;
+  padding: 12px 0;
   text-align: center;
   cursor: pointer;
   opacity: 0;
-  transition: opacity 0.3s;
+  transition: opacity 0.3s, background-color 0.3s, transform 0.3s;
 }
 
-.add-to-cart-button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+.add-to-cart-button-home:hover {
+  background-color: #ff9900;
+  transform: translateY(-2px);
 }
 
+/* Item count styles */
 .item-count {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 1rem;
-  height: 1rem;
-  margin-left: 1rem;
-  font-size: 12px;
+  font-weight: bolder;
+  min-width: 1.5rem;
+  height: 1.5rem;
+  margin-left: 0.5rem;
+  font-size: 0.75rem;
   background-color: #ffffff;
-  color: #db4444;
+  color: #ffad33;
   border-radius: 50%;
+  padding: 0 0.25rem;
+  transition: all 0.3s ease;
 }
 
+.custom-button:hover .item-count {
+  background-color: #ffad33;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+/* Empty cart button styles */
 .empty-cart-button {
+  background-color: #ff9900;
   color: white;
   border: none;
   padding: 10px 20px;
   margin-bottom: 20px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .empty-cart-button:hover {
-  background-color: #cc0000;
+  background-color: #ff8c00;
+  transform: translateY(-2px);
 }
 
+/* Confirmation cancel button styles */
 .confirmation-cancel {
+  background-color: #6c757d;
   color: white;
+  transition: all 0.3s ease;
 }
 
-.quick-view {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+.confirmation-cancel:hover {
+  background-color: #5a6268;
+  transform: translateY(-2px);
+}
+
+/* Cart icon styles */
+.cart-icon {
+  margin-right: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.custom-button:hover .cart-icon {
+  transform: scale(1.2);
+}
+
+/* Pulse animation for checkout button */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 173, 51, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(255, 173, 51, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 173, 51, 0);
+  }
+}
+
+.checkout-button:hover {
+  animation: pulse 2s infinite;
 }
