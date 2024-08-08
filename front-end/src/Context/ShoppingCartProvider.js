@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState } from "react";
+import { toast } from "react-hot-toast";
 
 const ShoppingCartContext = createContext();
 
@@ -10,12 +11,15 @@ export function ShoppingCartProvider({ children }) {
       const existingItem = prevItems.find((i) => i.id === item.id);
       if (existingItem) {
         if (existingItem.quantity + 1 > stockQuantity) {
+          toast.error(`Only ${stockQuantity} items in stock.`);
           return prevItems;
         }
+        toast.success("Item added to cart");
         return prevItems.map((i) =>
           i.id === item.id ? { ...i, quantity: i.quantity + 1 } : i
         );
       }
+      toast.success("Item added to cart");
       return [...prevItems, { ...item, quantity: 1 }];
     });
   };
@@ -24,28 +28,33 @@ export function ShoppingCartProvider({ children }) {
     setCartItems((prevItems) => {
       const existingItem = prevItems.find((i) => i.id === itemId);
       if (existingItem && existingItem.quantity > 1) {
+        toast.success("Removed item from cart");
         return prevItems.map((i) =>
           i.id === itemId ? { ...i, quantity: i.quantity - 1 } : i
         );
       }
+      toast.success("Item removed from cart");
       return prevItems.filter((item) => item.id !== itemId);
     });
   };
 
   const removeAllOfItem = (itemId) => {
-    setCartItems((prevItems) => prevItems.filter((item) => item.id !== itemId));
+    setCartItems((prevItems) => {
+      const removedItem = prevItems.find((item) => item.id === itemId);
+      if (removedItem) {
+        toast.success(`All ${removedItem.title} copies removed from cart!`);
+      }
+      return prevItems.filter((item) => item.id !== itemId);
+    });
   };
 
   const emptyCart = () => {
     setCartItems([]);
+    toast.success("Cart emptied");
   };
 
   const getTotalItems = () => {
-    let total = 0;
-    for (let i = 0; i < cartItems.length; i++) {
-      total += cartItems[i].quantity;
-    }
-    return total;
+    return cartItems.reduce((total, item) => total + item.quantity, 0);
   };
 
   const isItemInStock = (itemId, quantity) => {
