@@ -11,6 +11,7 @@ const About = () => {
   };
 
   return (
+    <div className="main-content">
     <div className="about">
       <div className="aboutText">
         <h1>About Us</h1>
@@ -21,6 +22,7 @@ const About = () => {
       <div className="backToSite">
         <Button text="Back to Site" onClick={handleBackToSiteClick}/>
       </div>
+    </div>
     </div>
   );
 };
