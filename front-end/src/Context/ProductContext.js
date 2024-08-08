@@ -38,7 +38,7 @@ export function ProductProvider({ children }) {
 
   return (
     <ProductContext.Provider
-      value={{ products, loading, error, artists, genres }}
+      value={{ products, loading, error, artists, genres, albums }}
     >
       {children}
     </ProductContext.Provider>

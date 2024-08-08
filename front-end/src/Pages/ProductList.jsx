@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useProducts } from "../Context/ProductContext";
 import { useShoppingCart } from "../Context/ShoppingCartProvider";
+import { useNavigate } from "react-router-dom";
 import Button from "../Components/Button/Button";
 import QuickViewModal from "../Components/Modal/QuickViewModal";
 import Pagination from "../Components/Pagination/Pagination";
@@ -14,7 +15,7 @@ const ProductList = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 12;
 
-  console.log("Products:", products);
+  const navigate = useNavigate();
 
   const getCurrentProducts = () => {
     const indexOfLastProduct = currentPage * itemsPerPage;
@@ -26,8 +27,10 @@ const ProductList = () => {
 
   if (loading) {
     return (
-      <div className="loading-div">
-        <Loading />
+      <div className="main-content">
+        <div className="loading-div">
+          <Loading />
+        </div>
       </div>
     );
   }
@@ -37,9 +40,11 @@ const ProductList = () => {
     return <div>Error: {error}</div>;
   }
 
-  const handleOpenProduct = (product) => {
+  const handleOpenProduct = (id) => {
     console.log("Opening product details");
-    console.log(product.id);
+    console.log(id);
+
+    navigate(`/product/${id}`);
   };
 
   const handleAddToCart = (e, product) => {
@@ -69,7 +74,11 @@ const ProductList = () => {
       <div className="top-of-product">
         <div className="product-list-container">
           {getCurrentProducts().map((product) => (
-            <div className="product-container" key={product.id}>
+            <div
+              className="product-container"
+              key={product.id}
+              onClick={() => handleOpenProduct(product.id)}
+            >
               <div className="product-content">
                 <h3>{product.name}</h3>
                 <div className="product-image-container">
@@ -87,7 +96,7 @@ const ProductList = () => {
                   <Button
                     text="Add to Cart"
                     onClick={(e) => handleAddToCart(e, product)}
-                    variant="cart"
+                    variant="add-to-cart"
                     className="add-to-cart-button"
                   />
                 </div>
@@ -114,6 +123,7 @@ const ProductList = () => {
             addToCart(product);
             setSelectedProduct(null);
           }}
+          openProduct={() => handleOpenProduct(selectedProduct)}
         />
       )}
     </div>

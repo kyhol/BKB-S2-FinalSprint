@@ -1,4 +1,3 @@
-/* Product List CSS */
 .product-list-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -8,7 +7,7 @@
 
 .product-container {
   display: flex;
-  border: 1px solid black;
+  box-shadow: var(--box-shadow);
   flex-direction: column;
   justify-content: flex-start;
   height: auto;
@@ -17,6 +16,14 @@
   border-radius: var(--border-radius);
   position: relative;
   transition: all 0.3s ease;
+  cursor: pointer;
+  z-index: 2;
+  border: 2px solid gray;
+}
+
+.product-container:hover {
+  transform: translateY(-0.5rem);
+  box-shadow: var(--box-shadow-hover);
 }
 
 .product-image-container {
@@ -29,11 +36,14 @@
   width: 100%;
   height: 100%;
   border-radius: var(--border-radius);
+  border: 2px solid gray;
   transition: filter 0.3s ease;
+  padding: 0.2rem;
 }
 
 .product-image-container:hover img {
   filter: blur(1px);
+  transform: scale(1.025);
 }
 
 .quick-view {
@@ -64,7 +74,7 @@
 
 .quantity-remaining {
   height: 1rem;
-  margin: 0.5rem 0;
+  margin: 0.75rem 0;
 }
 
 .hot-buy {
