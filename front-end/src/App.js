@@ -8,10 +8,13 @@ import ProductList from "./Pages/ProductList";
 import ShoppingCart from "./Pages/ShoppingCart";
 import About from "./Components/About/About";
 import "./index.css";
+import ShoppingCart from "./Pages/ShoppingCart";
+import ScrollToTop from "./Components/ScrollToTop/ScrollToTop";
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
