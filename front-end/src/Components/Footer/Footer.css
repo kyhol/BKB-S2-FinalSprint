@@ -411,9 +411,8 @@
     background: #2d6e7d;
     padding: 24px 80px;
     display: flex;
-    flex-direction: column;
     row-gap: 0px;
-    height: 200%;
+    height: 100%;
     align-items: center;
     justify-content: space-between;
     width: 118vh;
@@ -421,5 +420,9 @@
     position: absolute;
     left: 0;
     bottom: 0;
+  }
+  .version-7-dark .links3 {
+    margin-bottom: 0px;
+    margin-top: 2rem;
   }
 }
