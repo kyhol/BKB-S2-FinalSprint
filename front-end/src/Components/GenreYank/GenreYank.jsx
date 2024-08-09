@@ -112,7 +112,7 @@ const AlbumsByGenre = () => {
                     {hoveredAlbumId === product.id && (
                       <Button
                         text="Add to Cart"
-                        className="add-to-cart-button-home"
+                        className="add-to-cart-button-home2"
                         onClick={() => handleAddToCart(product)}
                       />
                     )}

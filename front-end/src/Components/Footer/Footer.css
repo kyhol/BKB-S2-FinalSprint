@@ -6,7 +6,7 @@
   background: #000000;
   height: 397px;
   position: relative;
-  overflow: hidden;
+
   width: 100%; /* Ensure the footer spans the full width of the viewport */
 }
 
@@ -402,4 +402,24 @@
 
 .space {
   margin-top: 0.5em;
+}
+@media (max-width: 480px) {
+  .version-7-dark {
+    width: 118vh;
+  }
+  .version-7-dark .container2 {
+    background: #2d6e7d;
+    padding: 24px 80px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0px;
+    height: 200%;
+    align-items: center;
+    justify-content: space-between;
+    width: 118vh;
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
 }

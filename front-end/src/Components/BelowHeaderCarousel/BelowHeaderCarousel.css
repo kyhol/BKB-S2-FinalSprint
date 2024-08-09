@@ -80,13 +80,66 @@ button img {
   margin-left: 17.5rem; /* 280px / 16 = 17.5rem */
   margin-bottom: 1.25rem; /* 20px / 16 = 1.25rem */
 }
+.buttonRightPointing::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateX(-100%);
+  transition: 0.6s;
+}
+.buttonRightPointing:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 4px 8px rgba(255, 173, 51, 0.3);
+}
+
+.buttonRightPointing:hover::after {
+  transform: translateX(100%);
+}
 .Slide2Button {
   margin-left: 27.8125rem; /* 445px / 16 = 27.8125rem */
+}
+.Slide2Button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateX(-100%);
+  transition: 0.6s;
+}
+.Slide2Button:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 4px 8px rgba(255, 173, 51, 0.3);
+}
+
+.Slide2Button:hover::after {
+  transform: translateX(100%);
 }
 .Slide3Button {
   margin-left: 55.5rem; /* 888px / 16 = 55.5rem */
 }
+.Slide3Button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateX(-100%);
+  transition: 0.6s;
+}
+.Slide3Button:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 4px 8px rgba(255, 173, 51, 0.3);
+}
 
+.Slide3Button:hover::after {
+  transform: translateX(100%);
+}
 @media (max-width: 64rem) {
   /* 1024px / 16 = 64rem */
   .carousel-container {
@@ -102,5 +155,34 @@ button img {
   }
   .Slide3Button {
     margin-left: 35rem; /* 560px / 16 = 35rem */
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-container {
+    max-width: 30rem; /* 800px / 16 = 50rem */
+    margin-bottom: 2.5rem; /* 40px / 16 = 2.5rem */
+  }
+  .carouselSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 118vh;
+  }
+  .buttonRightPointing {
+    margin-left: 7.25rem; /* 180px / 16 = 11.25rem */
+    margin-bottom: 0rem; /* 0px = 0rem */
+    top: 0.5rem;
+    width: 2.5rem;
+  }
+  .Slide2Button {
+    margin-left: 8.5rem; /* 268px / 16 = 16.75rem */
+    width: 10rem;
+    top: 1rem;
+  }
+  .Slide3Button {
+    margin-left: 20rem; /* 560px / 16 = 35rem */
+    width: 8rem;
   }
 }

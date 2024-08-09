@@ -5,4 +5,11 @@
   align-items: center;
   margin-top: 160px;
   margin-bottom: 160px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+@media (max-width: 480px) {
+  .dSMCWrapper {
+    width: 118vh;
+  }
 }
