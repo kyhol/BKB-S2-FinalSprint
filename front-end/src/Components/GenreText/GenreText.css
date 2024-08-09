@@ -37,4 +37,12 @@
 }
 
 @media (max-width: 480px) {
+  .testimonialsTextSection {
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    width: 118vh;
+    flex-direction: row;
+    gap: 20px;
+  }
 }

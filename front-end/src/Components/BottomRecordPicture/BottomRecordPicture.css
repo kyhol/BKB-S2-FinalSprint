@@ -21,3 +21,11 @@
   transform: translateY(-50%);
   width: 45%; /* Adjust this value as needed */
 }
+@media (max-width: 480px) {
+  .recordPictureContainer {
+    position: relative; /* Adjust this value as needed */
+  }
+  .recordContainer {
+    width: 118vh; /* Adjust this value as needed */
+  }
+}

@@ -436,6 +436,21 @@ button {
   justify-content: center;
   align-items: center;
 }
+
+.add-to-cart-button-home {
+  position: absolute; /* or relative depending on the layout */
+}
+
+/* When the album is hovered over, make the button visible */
+.cart-with-flat-discount:hover .add-to-cart-button-home {
+  opacity: 1;
+}
+.add-to-cart-button-home2 {
+  position: absolute;
+  margin-top: 8rem;
+  padding: 0.75rem 3rem;
+}
+
 /* Tablet (1024px and below) */
 @media (max-width: 1024px) {
   .cart-with-flat-discount {
@@ -528,5 +543,13 @@ button {
   .vector4 {
     width: 16px;
     height: 16px;
+  }
+  .cart-with-flat-discount {
+    margin: 0 auto;
+    padding: 8px;
+    width: 118vh;
+  }
+  .albumsWrapper {
+    width: 118vh;
   }
 }
