@@ -78,7 +78,7 @@ const ProductDetails = () => {
           <p className="product-description">{description}</p>
           <br />
           <div className="product-tracklist">
-            <h4>Track Listing:</h4>
+            <h2>Track Listing:</h2>
             <ol>
               {tracks.map((track, index) => (
                 <li key={index}>{track}</li>
