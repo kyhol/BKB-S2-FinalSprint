@@ -32,9 +32,8 @@ button {
     z-index: 2;
 }
 
-
 .aboutText {
-    margin: 10% 10% 3% 10%;
+    margin: 3% 10% 3% 10%;
     overflow-y: scroll;
 }
 
@@ -44,4 +43,44 @@ button {
 
 .backToSite {
     margin-bottom: 4%;
-} 
+}
+
+.aboutImageParent {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 5%;
+    position: relative;
+}
+
+.aboutImageChild {
+    width: 25%;
+    margin-bottom: 2%;
+    z-index: 2;
+    transition: transform 0.3s ease;
+    display: flex;
+    justify-content: center;
+}
+
+.aboutImageChild img {
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    border: 1px solid #f1bf1b;
+}
+
+.aboutImageChild:hover {
+    transform: scale(1.1);
+}
+
+.aboutImageText {
+    position: absolute;
+    justify-self: center;
+    align-self: center;
+    font-size: 2rem;
+    visibility: hidden;
+    margin-top: 50%;
+}
+
+.aboutImageChild:hover .aboutImageText {
+    visibility: visible;
+}
