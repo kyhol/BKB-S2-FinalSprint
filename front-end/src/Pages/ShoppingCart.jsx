@@ -38,7 +38,7 @@ const ShoppingCart = () => {
   };
 
   const getProductStock = (productId) => {
-    const product = products.find((p) => p.id === productId);
+    const product = products.find((prod) => prod.id === productId);
     return product ? product.quantity : 0;
   };
 
