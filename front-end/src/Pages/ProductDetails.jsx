@@ -39,44 +39,33 @@ const ProductDetails = () => {
   }
 
   if (error) {
-    console.log("Error:", error);
-    return <div>Error: {error}</div>;
+    return <div className="error-message" data-testid="error">Error: {error}</div>;
   }
 
   if (!selectedProduct) {
-    return <div>Product not found.</div>;
+    return <div className="product-not-found" data-testid="no-product">Product not found.</div>;
   }
 
-  const { coverImage, title, artist, price, description, tracks, quantity } =
-    selectedProduct;
-
-  const renderQuantityRemaining = (quantity) => {
-    if (quantity <= 10) {
-      return (
-        <div className="quantity-remaining hot-buy">
-          Only <span className="blink-text">{quantity}</span> left!
-        </div>
-      );
-    }
-    return null;
-  };
+  const { coverImage, title, artist, price, description, tracks, quantity } = selectedProduct;
 
   return (
-    <div className="main-content product-details">
+    <div className="main-content product-details" data-testid="product-details">
       <div className="product-details-container">
         <div className="half">
           <div className="product-image-container">
             <img src={coverImage} alt={title} />
           </div>
-          <br />
-          <h2 className="product-title">{artist}</h2>
-          <h3 className="product-artist">{title}</h3>
-          <p className="product-price">${price.toFixed(2)}</p>
-          {renderQuantityRemaining(quantity)}
+          <h2 className="product-title" data-testid="product-title">{title}</h2>
+          <h3 className="product-artist" data-testid="product-artist">{artist}</h3>
+          <p className="product-price" data-testid="product-price">${price.toFixed(2)}</p>
+          {quantity <= 10 && (
+            <div className="quantity-remaining hot-buy">
+              Only <span className="blink-text">{quantity}</span> left!
+            </div>
+          )}
         </div>
         <div className="half">
-          <p className="product-description">{description}</p>
-          <br />
+          <p className="product-description" data-testid="product-description">{description}</p>
           <div className="product-tracklist">
             <h2>Track Listing:</h2>
             <ol>
@@ -85,10 +74,10 @@ const ProductDetails = () => {
               ))}
             </ol>
           </div>
-          <br />
           <Button
             text="Add to Cart"
             onClick={() => handleAddToCart(selectedProduct)}
+            data-testid="add-to-cart-button"
           />
         </div>
       </div>
