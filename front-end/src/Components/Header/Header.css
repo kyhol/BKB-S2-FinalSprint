@@ -110,7 +110,7 @@ header h2:hover {
   justify-content: flex-end;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
   .title-section {
     padding: 1rem 3rem;
   }
@@ -127,6 +127,9 @@ header h2:hover {
   .nav-section {
     padding: 0.5rem 1rem;
   }
+}
+.left-side {
+  margin-left: 10rem;
 }
 
 @media (max-width: 768px) {
@@ -158,6 +161,9 @@ header h2:hover {
 
   .sale-popup-text {
     font-size: 0.9rem;
+  }
+  .left-side {
+    margin-left: 0;
   }
 }
 
@@ -195,7 +201,7 @@ header h2:hover {
   }
 
   .left-side button {
-    width: 60%;
+    width: 20%;
     margin-bottom: 0.5rem;
   }
 }
