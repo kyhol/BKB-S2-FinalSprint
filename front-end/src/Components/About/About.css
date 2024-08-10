@@ -1,86 +1,94 @@
 .about {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    color: white;
-    font-weight: bold;
-    text-shadow: 1px 1px 1px black;
-    background-image: url('../../Assets/About/record.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-bottom: 5%;
-    overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px black;
+  background-image: url("../../Assets/About/record.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 5%;
+  overflow: hidden;
+  width: 118vh;
+  max-width: 118vh;
 }
 
 .about::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(241, 191, 27, 0.3);
-    z-index: 1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(241, 191, 27, 0.3);
+  z-index: 1;
 }
 
 .aboutText,
 button {
-    position: relative;
-    z-index: 2;
+  position: relative;
+  z-index: 2;
 }
 
 .aboutText {
-    margin: 3% 10% 3% 10%;
-    overflow-y: scroll;
+  margin: 3% 10% 3% 10%;
+  overflow-y: scroll;
 }
 
 .aboutText p {
-    margin-bottom: 1%;
+  margin-bottom: 1%;
 }
 
 .backToSite {
-    margin-bottom: 4%;
+  margin-bottom: 4%;
 }
 
 .aboutImageParent {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-top: 5%;
-    position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 5%;
+  position: relative;
 }
 
 .aboutImageChild {
-    width: 25%;
-    margin-bottom: 2%;
-    z-index: 2;
-    transition: transform 0.3s ease;
-    display: flex;
-    justify-content: center;
+  width: 25%;
+  margin-bottom: 2%;
+  z-index: 2;
+  transition: transform 0.3s ease;
+  display: flex;
+  justify-content: center;
 }
 
 .aboutImageChild img {
-    border-radius: 50%;
-    aspect-ratio: 1/1;
-    border: 1px solid #f1bf1b;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  border: 1px solid #f1bf1b;
 }
 
 .aboutImageChild:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .aboutImageText {
-    position: absolute;
-    justify-self: center;
-    align-self: center;
-    font-size: 2rem;
-    visibility: hidden;
-    margin-top: 50%;
+  position: absolute;
+  justify-self: center;
+  align-self: center;
+  font-size: 2rem;
+  visibility: hidden;
+  margin-top: 50%;
 }
 
 .aboutImageChild:hover .aboutImageText {
-    visibility: visible;
+  visibility: visible;
+}
+@media (max-width: 480px) {
+  .main-content {
+    width: 118vh !important;
+    max-width: none !important;
+  }
 }

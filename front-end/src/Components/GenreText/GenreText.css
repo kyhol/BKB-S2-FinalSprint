@@ -46,3 +46,11 @@
     gap: 20px;
   }
 }
+@media (max-width: 480px) {
+  .genreTextContainer {
+    width: 118vh;
+  }
+  .genreText {
+    font-size: 1.5em;
+  }
+}
