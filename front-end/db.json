@@ -45,7 +45,7 @@
       ],
       "description": "Back in Black is the seventh studio album by Australian rock band AC/DC, released on 25 July 1980.",
       "inStock": true,
-      "quantity": 27
+      "quantity": 26
     },
     {
       "id": "3",
@@ -520,7 +520,7 @@
       ],
       "description": "Kind of Blue is a studio album by American jazz trumpeter Miles Davis. It was recorded on March 2 and April 22, 1959, at Columbia's 30th Street Studio in New York City, and released on August 17 of that year by Columbia Records.",
       "inStock": true,
-      "quantity": 30
+      "quantity": 29
     },
     {
       "id": "23",

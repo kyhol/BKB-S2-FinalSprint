@@ -1,3 +1,7 @@
+// Name: Brad Ayers, Brian Janes, Kyle Hollett
+// Description:
+// Date: 2024-08-02
+
 import React from "react";
 import Slider from "react-slick";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
