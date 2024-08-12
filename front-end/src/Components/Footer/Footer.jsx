@@ -17,7 +17,7 @@ const Version7Dark = ({ className = "", ...props }) => {
     <div className={`version-7-dark ${className}`} {...props}>
       <div className="container">
         <div className="_2023-kyle-hollett-brian-janes-bradley-avyers-all-rights-reserved">
-          © 2023 Kyle Hollett, Brian Janes, Bradley Avyers. All rights reserved.
+          © 2023  Kyle Hollett, Brian Janes, Bradley Ayers. All rights reserved.
         </div>
         <div className="links">
           <div className="terms-of-service">Terms of Service</div>
@@ -48,10 +48,10 @@ const Version7Dark = ({ className = "", ...props }) => {
               Email: kyle.hollett@keyin.com
             </div>
             <div className="email-kyle-hollett-keyin-com">
-              Email: kyle.hollett@keyin.com
+              Email: brian.janes@keyin.com
             </div>
             <div className="email-kyle-hollett-keyin-com">
-              Email: kyle.hollett@keyin.com
+              Email: bradley.ayers@keyin.com
             </div>
           </div>
         </div>
