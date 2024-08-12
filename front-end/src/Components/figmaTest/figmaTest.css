@@ -552,4 +552,7 @@ button {
   .albumsWrapper {
     width: 118vh;
   }
+  .frame-570 {
+    height: 400px;
+  }
 }
